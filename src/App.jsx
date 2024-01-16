@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import "./App.css";
 import WelcomePage from "./pages/welcome.page";
 import Home from "./pages/home.page";
-import Layout from "./components/layout.component";
 import AnimatePresenceProvider from "./components/AnimatePresenceProvider";
 import Contact from "./pages/contact.page";
+import MajorsPage from "./pages/majors.page";
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/majors" element={<MajorsPage />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresenceProvider>

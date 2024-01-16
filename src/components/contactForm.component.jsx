@@ -1,69 +1,111 @@
-import React from "react";
-import MostaqillaText from "../assets/WelcomeText.png";
+import React, { useRef, useState } from "react";
+import ContactImage from "../assets/Contact.png";
+import emailjs from "@emailjs/browser";
+
 const ContactForm = () => {
+  const [subject, setSubject] = useState();
+  const [email, setEmail] = useState();
+  const [message, setMessage] = useState();
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(import.meta.env.VITE_EMAIL_PUBLIC_KEY);
+
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        form.current,
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
   return (
-    <div className="flex relative justify-center w-full py-28 bg-gray-200/40">
-      <img
-        src={MostaqillaText}
-        alt="mostaqilla"
-        width={200}
-        className="absolute -top-28 left-1/2 transform -translate-x-1/2 z-0 "
-      />
-      <form className="w-full px-8 py-6 flex flex-col justify-end bg-[#e0e0e0]/40  rounded-md mx-4 z-10 ">
-        <div className="md:w-full md:bg-gradient-to-b md:from-[#eaebec] md:via-[#e6e6e5] md:to-[#fbfbfb]">
-          <h2 className="py-4 text-3xl bg-gradient-to-b from-[#f8e167] via-[#f8e167]/60 to-[#f8e167]/20 text-[#2e7eb0] font-bold tracking-wide text-center">
-            تواصل
-          </h2>
-          {/* <img
-          src={ScreenImg}
-          alt="Screen"
-          className="object-cover object-fill md:h-[400px]"
-        /> */}
-        </div>
-        <div className="w-full flex flex-col justify-end p-4">
-          <label
-            htmlFor="subject"
-            className="tracking-wide text-[#1e89c1] text-2xl text-end w-full pb-2 text-end"
-          >
-            موضوع
-          </label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            className="text-2xl w-full outline-none border border-[#1e89c1] h-12 text-right"
-          />
-        </div>
-        <div className="w-full flex flex-col justify-end p-4">
-          <label
-            htmlFor="email"
-            className="tracking-wide text-[#1e89c1] text-2xl text-end w-full pb-2 text-end"
-          >
-            بريد إلكتروني
-          </label>
-          <input
-            type="text"
-            id="email"
-            name="email"
-            className="text-2xl w-full outline-none border border-[#1e89c1] h-12 text-right"
-          />
-        </div>
-        <div className="w-full flex flex-col justify-end p-4">
-          <label
-            htmlFor="message"
-            className="tracking-wide text-[#1e89c1] text-2xl text-end w-full pb-2 text-end"
-          >
-            رسالة
-          </label>
-          <textarea
-            type="text"
-            id="message"
-            name="message"
-            className="text-2xl w-full outline-none border border-[#1e89c1] h-40 text-right"
-          />
-        </div>
-      </form>
-    </div>
+    <>
+      <div className="w-full h-auto absolute top-[350px] flex  gap-8 w-full justify-center items-center flex flex-col ">
+        <img src={ContactImage} alt="Contact" width={400} height={150} />
+        {/* <h2 className="py-4 text-3xl bg-[#f8e167]/80 text-black font-bold tracking-wide text-center p-4">
+              تقدم لكم رابطة المستقلة، كل ما يخص طلبة كلية التربية{" "}
+            </h2> */}
+      </div>
+      <div className="w-full h-auto pt-8 pb-20  bg-gradient-to-b to-[#efebe4] from-[#dfd7c9] flex flex-col md:flex-row px-8 gap-8 justify-center items-center ">
+        <form
+          action=""
+          ref={form}
+          onSubmit={sendEmail}
+          className="w-full md:w-2/3 px-8"
+        >
+          <div className="flex flex-col gap-2">
+            <label
+              htmlFor="subject"
+              className="w-full flex justify-end text-xl text-black"
+            >
+              الموضوع
+            </label>
+            <input
+              name="subject"
+              required
+              id="subject"
+              onChange={(e) => setSubject(e.target.value)}
+              type="text"
+              className="bg-[#efebe4] w-full h-12 border-[0.7px] border-[#c8c1b4] outline-none text-right text-lg rounded-md"
+              placeholder=""
+            />
+          </div>
+          <div className="flex flex-col gap-2 mt-2">
+            <label
+              htmlFor="email"
+              className="w-full flex justify-end text-xl text-black"
+            >
+              البريد الإلكتروني{" "}
+            </label>
+            <input
+              name="email"
+              required
+              id="email"
+              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              className="bg-[#efebe4] w-full h-12 border-[0.7px] border-[#c8c1b4] outline-none text-right text-lg rounded-md"
+              placeholder=""
+            />
+          </div>
+          <div className="flex flex-col gap-2 mt-2">
+            <label
+              htmlFor="message"
+              className="w-full flex justify-end text-xl text-black"
+            >
+              الرسالة{" "}
+            </label>
+            <textarea
+              name="message"
+              required
+              id="message"
+              onChange={(e) => setMessage(e.target.value)}
+              type="text"
+              className="bg-[#efebe4] w-full h-32 border-[0.7px] border-[#c8c1b4] outline-none text-right text-lg rounded-md"
+              placeholder=""
+            />
+          </div>
+          <div className="w-full text-right">
+            <button
+              type="submit"
+              className="bg-[#1e89c1] text-2xl text-white mt-6 px-12 py-3 "
+            >
+              إرسال
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
   );
 };
 

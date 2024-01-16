@@ -4,7 +4,10 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        "background-pattern": "url('public/pattern.png')",
+        "background-pattern": "url('/pattern.png')",
+        "background-kuwait-university": "url('/kuwait-university-1.png')",
+        mostaqilla: "url('/mostaqilla-removed-bg.png')",
+        "mostaqilla-stripped": "url('/mostaqilla-stripped.png')",
       },
     },
   },

@@ -3,22 +3,23 @@ import ScreenImg from "../assets/Screen2.png";
 import { Button } from "antd";
 import MajorsAndContact from "./majorsAndContact.component";
 import { useLocation } from "react-router-dom";
-
+import MajorsImg from "../assets/majors.png";
 // bg-[#e9ebec]  via-[#e6e6e5] to-[#eaebec] bg-gradient-to-b
-const Screen = () => {
+const Screen2 = () => {
   const location = useLocation();
   return (
     <div className="w-full relative flex justify-center flex-col items-center">
       <div
-        className={`w-full bg-background-kuwait-university  bg-center bg-cover  ${
-          location.pathname !== "/contact"
-            ? "md:h-[900px] h-[950px]"
-            : "md:h-[1100px] h-[1450px]"
-        }`}
+        className={`w-full bg-background-kuwait-university  bg-center bg-cover md:h-[400px] h-[630px]`}
       >
-        <div className="w-full h-full bg-[#e2d2b5]/30  backdrop-blur-md  bg-opacity-0 relative">
-          <div className="w-[300px] h-44 absolute top-48 left-1/2 transform -translate-y-1/2 -translate-x-1/2 ">
-            <div className="w-[350px] h-44 bg-center bg-cover bg-mostaqilla absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2"></div>
+        <div className="w-full h-full  bg-[#e2d2b5]/30 backdrop-blur-md  relative">
+          <div className="w-full h-auto absolute top-36 flex md:flex-row flex-col w-full justify-between items-center gap-4">
+            <div className="w-[350px] h-44 bg-center bg-cover bg-mostaqilla z-20 md:ml-32 ml-0"></div>
+            <div className="text-3xl  font-bold text-gray-800 text-right md:w-1/2 w-[90%] md:mr-12 w-full bg-black/20 backdrop-blur-sm leading-relaxed tracking-wide text-[#F4DA5E] rounded-md p-4 ">
+              تقدم لكم رابطة المستقلة، كل ما يخص طلبة كلية التربية من المستندات
+              اللازمة لمساعدتكم في دراساتكم الجامعية
+            </div>
+
             {/* <div className="absolute w-fit  -bottom-[80px] left-1/2 transform -translate-x-1/2  rounded-2xl p-4">
               <h2 className=" w-fit text-2xl font-bold  text-[#1e89c1] tracking-wide underline">
                 الصفحة الرئيسية
@@ -39,4 +40,4 @@ const Screen = () => {
   );
 };
 
-export default Screen;
+export default Screen2;

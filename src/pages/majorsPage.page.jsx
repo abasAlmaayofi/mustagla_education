@@ -1,28 +1,26 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
-import { useLocation } from "react-router-dom";
 import Layout from "../components/layout.component";
-import Screen from "../components/screen.component";
+import ContactForm from "../components/contactForm.component";
+import Screen2 from "../components/screen2.component";
 import Majors from "../components/majors.component";
+import Header from "../components/header.component";
+import Footer2 from "../components/footer2.component";
 
 const MajorsPage = () => {
-  const location = useLocation();
   return (
     <AnimatePresence>
-      {location.pathname == "/home" ? (
+      {location.pathname == "/majors" ? (
         <motion.div
           initial={{ opacity: 0, x: 1000 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -1000 }}
           transition={{ type: "string", stiffness: 40 }}
-          className="relative"
         >
-          <Layout>
-            <div className="w-full relative">
-              <Screen />
-              <Majors />
-            </div>
-          </Layout>
+          <Header />
+          <Screen2 />
+          <Majors />
+          <Footer2 />
         </motion.div>
       ) : (
         ""

@@ -4,9 +4,16 @@ import WelcomeBackground from "../assets/WelcomeBackground.png";
 import Welcome from "../assets/Welcome.png";
 import WelcomeText from "../assets/WelcomeText.png";
 import Logo from "../assets/Logo-1.png";
-import { Button } from "antd";
+import { Button, FloatButton } from "antd";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Instagram, LayoutGrid, Twitter } from "lucide-react";
+import {
+  CommentOutlined,
+  CustomerServiceOutlined,
+  UnorderedListOutlined,
+  InstagramOutlined,
+  TwitterOutlined,
+} from "@ant-design/icons";
 
 const WelcomePage = () => {
   const location = useLocation();
@@ -30,7 +37,16 @@ const WelcomePage = () => {
               className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
               onClick={() => setShowMedia((val) => !val)}
             >
-              <AnimatePresence>
+              <FloatButton.Group
+                trigger="click"
+                type="dashed"
+                style={{ right: 0, top: 0 }}
+                icon={<UnorderedListOutlined />}
+              >
+                <FloatButton icon={<InstagramOutlined />} />
+                <FloatButton icon={<TwitterOutlined />} />
+              </FloatButton.Group>
+              {/* <AnimatePresence>
                 {showMedia ? (
                   <>
                     <motion.div
@@ -57,14 +73,14 @@ const WelcomePage = () => {
                 ) : (
                   ""
                 )}
-              </AnimatePresence>
-              <div
+              </AnimatePresence> */}
+              {/* <div
                 className={`${
                   showMedia ? "bg-white/30" : ""
                 } p-3 rounded-full text-gray-500/80`}
               >
                 <LayoutGrid size={18} />
-              </div>
+              </div> */}
             </div>
             <div className="flex jusitfy-center gap-8  items-center flex-col z-10 w-screen">
               <img

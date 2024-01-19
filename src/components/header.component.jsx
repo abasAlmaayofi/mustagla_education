@@ -9,6 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 const Header = () => {
   const loaction = useLocation();
   const [showSidebar, setShowSidebar] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
   const [page, setPage] = useState("mainpage");
   const location = useLocation();
 
@@ -25,21 +26,35 @@ const Header = () => {
     <>
       <div className="absolute w-full z-10">
         <div
-          className={`w-full px-4 py-2 flex bg-[#eff1f7] justify-between items-center bg-opacity-0 border-b ${
-            location.pathname == "home"
-              ? "border-white/30"
-              : "border-gray-300/30"
-          }`}
+          className={`w-full px-4 py-4 flex bg-[#eff1f7] justify-between items-center bg-opacity-0 border-b border-black `}
         >
-          <div className="bg-black/10 backdrop-blur-md bg-opacity-30 rounded-full text-black/80 p-3 flex gap-2">
-            <Search />
+          <div>
+            {/* <div
+              className="text-black bg-transparent p-3 flex gap-2 cursor-pointer font-light"
+              onClick={() => setShowSearch((val) => !val)}
+            >
+              <Search size={23} />
+            </div>
+            <div
+              className={`transition-all duration-150 transform flex items-end ${
+                showSearch ? "block" : "hidden"
+              }`}
+            >
+              <input
+                type="text"
+                className="bg-transparent border-b rounded-none outline-none mb-3 border-gray-500 mr-4 text-right text-white/70"
+              />
+            </div> */}
+            <span className="md:text-2xl text-xl text-[#1b7bad] font-bold uppercase">
+              MostaqillaEDU
+            </span>
           </div>
           {/* <div className="flex gap-2 items-center">
             <h2 className="font-bold tracking-widest text-xl text-[#1e89c1] uppercase">
               Mostaqilla
             </h2>
           </div> */}
-          <div className="md:hidden">
+          <div className="md:hidden text-black">
             <Button
               size="lg"
               type="ghost"
@@ -48,8 +63,51 @@ const Header = () => {
               onClick={() => setShowSidebar(true)}
             />
           </div>
+          <div className="md:flex flex-row-reverse gap-6 relative ml-auto hidden">
+            <Link
+              to="/home"
+              onClick={(e) => setPage(e.target.name)}
+              className={`text-lg tracking-wide text-center  text-black ${
+                page == "mainpage" ? "" : "font-light"
+              } py-2   `}
+              name="mainpage"
+            >
+              الصفحة الرئيسية
+            </Link>
+            <Link
+              to="/"
+              onClick={(e) => setPage(e.target.name)}
+              className={`text-lg tracking-wide text-center  text-black ${
+                page == "coverpage" ? "" : "font-light"
+              } py-2 `}
+              name="coverpage"
+            >
+              بوابة الدخول
+            </Link>
+            <Link
+              to="/majors"
+              onClick={(e) => setPage(e.target.name)}
+              className={`text-lg tracking-wide text-center  text-black ${
+                page == "departmentspage" ? "" : "font-light"
+              } py-2 `}
+              name="departmentspage"
+            >
+              التخصصات
+            </Link>
+            <Link
+              to="/contact"
+              onClick={(e) => setPage(e.target.name)}
+              className={`text-lg tracking-wide text-center text-black ${
+                page == "contactpage" ? "" : "font-light"
+              } py-2 `}
+              name="contactpage"
+            >
+              تواصل
+            </Link>
+          </div>
         </div>
       </div>
+
       <AnimatePresence>
         {showSidebar ? (
           <motion.div
@@ -57,7 +115,7 @@ const Header = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", stiffness: 30 }}
             exit={{ x: 1000 }}
-            className={`inset-0 fixed md:hidden md:ml-[60%] ml-[30%] z-20  bg-gradient-to-r to-[#f2efe9] from-[#dfd7c9]  z-40`}
+            className={`inset-0 fixed md:hidden md:ml-[60%] ml-[30%] z-20 backdrop-blur-md  bg-gradient-to-r to-[#e2d2b5]/70 from-[#e2d2b5]/70  z-40`}
           >
             <div className="border-b border-[#b2aca0]/70">
               <Button
@@ -70,9 +128,9 @@ const Header = () => {
               <Link
                 to="/home"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-center text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2  text-[#1e89c1] ${
                   page == "mainpage" ? "font-bold " : ""
-                } py-2 text-center  `}
+                } py-2   `}
                 name="mainpage"
               >
                 الصفحة الرئيسية
@@ -80,9 +138,9 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-center text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2  text-[#1e89c1] ${
                   page == "coverpage" ? "font-bold " : ""
-                } py-2 mx-8 `}
+                } py-2 `}
                 name="coverpage"
               >
                 بوابة الدخول
@@ -90,9 +148,9 @@ const Header = () => {
               <Link
                 to="/majors"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-center text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2  text-[#1e89c1] ${
                   page == "departmentspage" ? "font-bold " : ""
-                } py-2 mx-8 `}
+                } py-2 `}
                 name="departmentspage"
               >
                 التخصصات
@@ -100,16 +158,16 @@ const Header = () => {
               <Link
                 to="/contact"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-center text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2 text-[#1e89c1] ${
                   page == "contactpage" ? "font-bold " : ""
-                } py-2 mx-8 `}
+                } py-2 `}
                 name="contactpage"
               >
                 تواصل
               </Link>
             </div>
             <div className="mt-auto border-t border-[#b2aca0]/70 absolute bottom-0 w-full">
-              <h2 className="text-center mt-2 text-gray-500 text-sm">
+              <h2 className="text-center mt-2 text-gray-700 text-sm">
                 {" "}
                 مستقلة | 2024 &copy; جميع حقوق النشر محفوظة
               </h2>

@@ -5,7 +5,7 @@ import WelcomePage from "./pages/welcome.page";
 import Home from "./pages/home.page";
 import AnimatePresenceProvider from "./components/AnimatePresenceProvider";
 import Contact from "./pages/contact.page";
-import MajorsPage from "./pages/majors.page";
+import MajorsPage from "./pages/majorsPage.page";
 
 function App() {
   return (

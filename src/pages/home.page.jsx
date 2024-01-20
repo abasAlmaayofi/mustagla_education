@@ -19,12 +19,7 @@ const Home = () => {
           transition={{ type: "string", stiffness: 40 }}
           className="relative"
         >
-          <Layout>
-            <div className="w-full relative">
-              <Screen />
-              <MajorsAndContact />
-            </div>
-          </Layout>
+          <Screen />
         </motion.div>
       ) : (
         ""

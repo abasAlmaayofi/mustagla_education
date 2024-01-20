@@ -12,7 +12,7 @@ const Screen2 = () => {
       <div
         className={`w-full bg-background-kuwait-university  bg-center bg-cover md:h-[400px] h-[630px]`}
       >
-        <div className="w-full h-full  bg-[#e2d2b5]/30 backdrop-blur-md  relative">
+        <div className="w-full h-full  bg-gradient-to-r from-transparent to-gray-300/60  relative">
           <div className="w-full h-auto absolute top-36 flex md:flex-row flex-col w-full justify-between items-center gap-4">
             <div className="w-[350px] h-44 bg-center bg-cover bg-mostaqilla z-20 md:ml-32 ml-0"></div>
             <div className="text-3xl  font-bold text-gray-800 text-right md:w-1/2 w-[90%] md:mr-12 w-full bg-black/20 backdrop-blur-sm leading-relaxed tracking-wide text-[#F4DA5E] rounded-md p-4 ">

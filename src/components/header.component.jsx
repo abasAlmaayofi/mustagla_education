@@ -115,9 +115,9 @@ const Header = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", stiffness: 30 }}
             exit={{ x: 1000 }}
-            className={`inset-0 fixed md:hidden md:ml-[60%] ml-[30%] z-20 backdrop-blur-md  bg-gradient-to-r to-[#e2d2b5]/70 from-[#e2d2b5]/70  z-40`}
+            className={`inset-0 fixed md:hidden md:ml-[60%] ml-[30%] z-20 backdrop-blur-md  bg-gradient-to-r to-[#1e89c1]/40 from-[#1e89c1]/40  z-40`}
           >
-            <div className="border-b border-[#b2aca0]/70">
+            <div className="border-b border-[#125273]/70">
               <Button
                 className="border-0  text-black/70 m-2"
                 icon={<X size={28} />}
@@ -128,7 +128,7 @@ const Header = () => {
               <Link
                 to="/home"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-end pr-2  text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2  text-[#125273] ${
                   page == "mainpage" ? "font-bold " : ""
                 } py-2   `}
                 name="mainpage"
@@ -138,7 +138,7 @@ const Header = () => {
               <Link
                 to="/"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-end pr-2  text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2  text-[#125273] ${
                   page == "coverpage" ? "font-bold " : ""
                 } py-2 `}
                 name="coverpage"
@@ -148,7 +148,7 @@ const Header = () => {
               <Link
                 to="/majors"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-end pr-2  text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2  text-[#125273] ${
                   page == "departmentspage" ? "font-bold " : ""
                 } py-2 `}
                 name="departmentspage"
@@ -158,7 +158,7 @@ const Header = () => {
               <Link
                 to="/contact"
                 onClick={(e) => setPage(e.target.name)}
-                className={`text-2xl tracking-wide text-end pr-2 text-[#1e89c1] ${
+                className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
                   page == "contactpage" ? "font-bold " : ""
                 } py-2 `}
                 name="contactpage"
@@ -166,8 +166,8 @@ const Header = () => {
                 تواصل
               </Link>
             </div>
-            <div className="mt-auto border-t border-[#b2aca0]/70 absolute bottom-0 w-full">
-              <h2 className="text-center mt-2 text-gray-700 text-sm">
+            <div className="mt-auto border-t border-[#125273]/70 absolute bottom-0 w-full">
+              <h2 className="text-center mt-2 text-[#125273] text-sm">
                 {" "}
                 مستقلة | 2024 &copy; جميع حقوق النشر محفوظة
               </h2>

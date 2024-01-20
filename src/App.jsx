@@ -6,6 +6,7 @@ import Home from "./pages/home.page";
 import AnimatePresenceProvider from "./components/AnimatePresenceProvider";
 import Contact from "./pages/contact.page";
 import MajorsPage from "./pages/majorsPage.page";
+import Majors from "./pages/majors.page";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<WelcomePage />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/majors" element={<MajorsPage />} />
+            <Route path="/majors" element={<Majors />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresenceProvider>

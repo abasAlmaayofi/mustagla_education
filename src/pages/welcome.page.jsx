@@ -14,6 +14,7 @@ import {
   InstagramOutlined,
   TwitterOutlined,
 } from "@ant-design/icons";
+import ScreenLogo from "../assets/ScreenLogo.png";
 
 const WelcomePage = () => {
   const location = useLocation();
@@ -32,14 +33,14 @@ const WelcomePage = () => {
           exit={{ x: -1000 }}
           transition={{ type: "string", stiffness: 40 }}
         >
-          <div className="w-screen h-screen relative flex justify-center items-center">
+          <div className="w-screen h-screen relative flex justify-center items-center bg-[#F5F5F5]">
             <div
               className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
               onClick={() => setShowMedia((val) => !val)}
             >
               <FloatButton.Group
                 trigger="click"
-                type="dashed"
+                type="outlined"
                 style={{ right: 0, top: 0 }}
                 icon={<UnorderedListOutlined />}
               >
@@ -83,10 +84,17 @@ const WelcomePage = () => {
               </div> */}
             </div>
             <div className="flex jusitfy-center gap-8  items-center flex-col z-10 w-screen">
-              <img
+              {/* <img
                 src={Logo}
                 alt="Mustagla Education"
                 className="w-[400px] h-[400px] md:block hidden rounded-full relative -top-20"
+              /> */}
+              <img
+                src={ScreenLogo}
+                alt="Logo"
+                className="rounded-full border-4 border-double border-[#125273] p-3 relative -top-20"
+                width={400}
+                height={400}
               />
               <img
                 src={Welcome}
@@ -98,9 +106,12 @@ const WelcomePage = () => {
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 40 }}
                 onClick={OnClick}
-                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 top-[550px] text-white/80 flex justify-center items-center shadow"
+                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 top-[550px] text-white/80 flex justify-center items-center shadow-md shadow-gray-500/50"
               >
-                <ChevronRight size={38} />
+                <ChevronRight size={38} className="" />
+                {/* <h1 className="text-3xl tracking-wide text-[#1e89c1] md:block hidden">
+                  دخول
+                </h1> */}
               </motion.div>
             </div>
             {/* <img

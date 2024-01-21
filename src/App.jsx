@@ -17,7 +17,7 @@ function App() {
             <Route path="/" element={<WelcomePage />} />
             <Route path="/home" element={<Home />} />
             <Route path="/majors" element={<Majors />} />
-            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/contact" element={<Contact />} /> */}
           </Routes>
         </AnimatePresenceProvider>
       </BrowserRouter>

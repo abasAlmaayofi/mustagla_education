@@ -10,14 +10,15 @@ const Head2 = () => {
   const { Title } = Typography;
   const [page, setPage] = useState("mainpage");
   return (
-    <Header
+    <div
       style={{
         display: "flex",
         alignItems: "center",
         justifyContent: "between",
-        backgroundColor: "white",
+        backgroundColor: "#F5F5F5",
         paddingLeft: "10px",
         height: "60px",
+        // borderBottom: "2px solid black",
       }}
     >
       <AnimatePresence>
@@ -27,16 +28,16 @@ const Head2 = () => {
             animate={{ x: 0 }}
             transition={{ type: "spring", stiffness: 30 }}
             exit={{ x: 1000 }}
-            className={`inset-0 fixed md:hidden md:ml-[60%] ml-[30%] z-20 bg-white shadow-md shadow shadow-gray-500/50 z-40`}
+            className={`inset-0 fixed md:hidden z-20 bg-[#125273] shadow-md shadow shadow-gray-500/50 z-40`}
           >
             <div className="border-b-2 border-[#125273]">
               <Button
-                className="border-0 font-bold  text-[#125273] m-2"
+                className="border-0 font-bold  text-white m-2"
                 icon={<X size={28} />}
                 onClick={() => setShowSidebar(false)}
               />
             </div>
-            <div className="mt-8  flex flex-col gap-3 relative">
+            <div className="mt-8  flex flex-col justify-center items-center gap-3 relative bg-[#125273]">
               <Link
                 to="/home"
                 onClick={(e) => setPage(e.target.name)}
@@ -45,14 +46,14 @@ const Head2 = () => {
                 // } py-2 `}
                 // name="contactpage"
               >
-                <Title
-                  level={2}
-                  style={{ color: "#125273", fontSize: "23px" }}
-                  type="link"
-                  className="text-right mr-2"
+                <h1
+                  // level={2}
+                  // style={{ color: "#125273", fontSize: "20px" }}
+                  // type="link"
+                  className="text-right mr-2 text-4xl text-white mt-4"
                 >
                   الصفحة الرئيسية
-                </Title>
+                </h1>
               </Link>
               <Link
                 to="/"
@@ -62,14 +63,14 @@ const Head2 = () => {
                 // } py-2 `}
                 // name="contactpage"
               >
-                <Title
-                  level={2}
-                  style={{ color: "#125273", fontSize: "23px" }}
-                  type="link"
-                  className="text-right mr-2"
+                <h1
+                  // level={2}
+                  // style={{ color: "#125273", fontSize: "20px" }}
+                  // type="link"
+                  className="text-right mr-2 text-4xl text-white mt-4"
                 >
                   بوابة الدخول
-                </Title>
+                </h1>
               </Link>
               <Link
                 to="/majors"
@@ -79,35 +80,35 @@ const Head2 = () => {
                 // } py-2 `}
                 // name="contactpage"
               >
-                <Title
-                  level={2}
-                  style={{ color: "#125273", fontSize: "23px" }}
-                  type="link"
-                  className="text-right mr-2"
+                <h1
+                  // level={2}
+                  // style={{ color: "#125273", fontSize: "20px" }}
+                  // type="link"
+                  className="text-right mr-2 text-4xl text-white mt-4"
                 >
                   التخصصات
-                </Title>
+                </h1>
               </Link>
               <Link
-                to="/contact"
+                to="/home#contact"
                 onClick={(e) => setPage(e.target.name)}
                 // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
                 //   page == "contactpage" ? "font-bold " : ""
                 // } py-2 `}
                 // name="contactpage"
               >
-                <Title
-                  level={2}
-                  style={{ color: "#125273", fontSize: "23px" }}
-                  type="link"
-                  className="text-right mr-2"
+                <h1
+                  // level={3}
+                  // style={{ color: "#125273", fontSize: "20px" }}
+                  // type="link"
+                  className="text-right mr-2 text-4xl text-white mt-4"
                 >
                   تواصل{" "}
-                </Title>
+                </h1>
               </Link>
             </div>
-            <div className="mt-auto border-t-2 border-[#125273] absolute bottom-0 w-full">
-              <h2 className="text-center mt-2 text-[#125273] font-bold text-xs">
+            <div className="mt-auto border-t border-[#125273]/10 absolute bottom-0 w-full">
+              <h2 className="text-center mt-2 text-white text-sm">
                 {" "}
                 مستقلة | 2024 &copy; جميع حقوق النشر محفوظة
               </h2>
@@ -118,15 +119,17 @@ const Head2 = () => {
         )}
       </AnimatePresence>
       {/* <span className="md:text-xl text-xl min-w-0 text-[#1b7bad] font-bold uppercase"></span>{" "} */}
-      <Title
+      {/* <Title
         level={2}
         type="link"
         style={{ color: "#125273" }}
         className="text-[#125273]"
       >
         MostaqillaEDU
-      </Title>
-      <div className="justify-start ml-auto gap-4 md:flex hidden flex-row-reverse">
+      </Title> */}
+      <div className="bg-mostaqilla-stripped bg-contain relative right-4 bg-no-repeat bg-center w-52 h-44"></div>
+
+      <div className="justify-start ml-auto gap-4 md:flex hidden flex-row-reverse items-center bg-[#F5F5F5]">
         <Link
           to="/home"
           onClick={(e) => setPage(e.target.name)}
@@ -135,14 +138,14 @@ const Head2 = () => {
           // } py-2 `}
           // name="contactpage"
         >
-          <Title
-            level={2}
-            style={{ color: "#125273", fontSize: "23px" }}
-            type="link"
-            className="text-right mr-2"
+          <h1
+            // level={2}
+            // style={{ color: "#125273", fontSize: "20px" }}
+            // type="link"
+            className="text-right mr-2 text-xl text-[#125273] mt-4"
           >
             الصفحة الرئيسية
-          </Title>
+          </h1>
         </Link>
         <Link
           to="/"
@@ -152,14 +155,14 @@ const Head2 = () => {
           // } py-2 `}
           // name="contactpage"
         >
-          <Title
-            level={2}
-            style={{ color: "#125273", fontSize: "23px" }}
-            type="link"
-            className="text-right mr-2"
+          <h1
+            // level={2}
+            // style={{ color: "#125273", fontSize: "20px" }}
+            // type="link"
+            className="text-right mr-2 text-xl text-[#125273] mt-4"
           >
             بوابة الدخول
-          </Title>
+          </h1>
         </Link>
         <Link
           to="/majors"
@@ -169,52 +172,45 @@ const Head2 = () => {
           // } py-2 `}
           // name="contactpage"
         >
-          <Title
-            level={2}
-            style={{ color: "#125273", fontSize: "23px" }}
-            type="link"
-            className="text-right mr-2"
+          <h1
+            // level={2}
+            // style={{ color: "#125273", fontSize: "20px" }}
+            // type="link"
+            className="text-right mr-2 text-xl text-[#125273] mt-4"
           >
             التخصصات
-          </Title>
+          </h1>
         </Link>
         <Link
-          to="/contact"
+          to="/home#contact"
           onClick={(e) => setPage(e.target.name)}
           // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
           //   page == "contactpage" ? "font-bold " : ""
           // } py-2 `}
           // name="contactpage"
         >
-          <Title
-            level={2}
-            style={{ color: "#125273", fontSize: "23px" }}
-            type="link"
-            className="text-right mr-2"
+          <h1
+            // level={3}
+            // style={{ color: "#125273", fontSize: "20px" }}
+            // type="link"
+            className="text-right mr-2 text-xl text-[#125273] mt-4"
           >
             تواصل{" "}
-          </Title>
+          </h1>
         </Link>
       </div>
-      <Menu
-        theme="light"
-        mode="horizontal"
-        defaultSelectedKeys={["2"]}
-        className="flex justify-end border-none md:hidden block"
-        style={{ flex: 1, minWidth: 0 }}
-      >
-        {/* <MenuItem> */}
-        <Button
-          size="lg"
-          type="ghost"
-          shape="circle"
-          className="relative left-8"
-          icon={<AlignRight />}
-          onClick={() => setShowSidebar(true)}
-        />
-        {/* </MenuItem> */}
-      </Menu>
-    </Header>
+
+      {/* <MenuItem> */}
+      <Button
+        size="lg"
+        type="ghost"
+        shape="circle"
+        className="ml-auto mr-2 md:hidden block"
+        icon={<AlignRight />}
+        onClick={() => setShowSidebar(true)}
+      />
+      {/* </MenuItem> */}
+    </div>
   );
 };
 

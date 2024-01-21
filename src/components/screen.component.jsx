@@ -2,8 +2,11 @@ import React from "react";
 import ScreenImg from "../assets/Screen2.png";
 import { Button, Layout, Typography } from "antd";
 import MajorsAndContact from "./majorsAndContact.component";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Head2 from "./head2.components";
+import ScreenLogo from "../assets/ScreenLogo.png";
+import { Content, Footer } from "antd/es/layout/layout";
+import Contact from "./Contact.component";
 
 // bg-[#e9ebec]  via-[#e6e6e5] to-[#eaebec] bg-gradient-to-b
 const Screen = () => {
@@ -12,20 +15,43 @@ const Screen = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Head2 />
-      <div className="w-screen bg-background-kuwait-university  bg-center bg-cover">
-        <div className="w-full md:h-[300px] h-[600px] bg-gradient-to-r from-gray-500/40 to-white/20 backdrop-blur-sm flex md:flex-row flex-col items-center justify-center">
-          <div className="bg-mostaqilla-stripped bg-contain bg-no-repeat bg-center md:w-1/2 w-4/5 h-44"></div>
-          <Title
-            level={2}
-            style={{ color: "#125273" }}
-            type="link"
-            className="text-right mr-2 tracking-widest w-4/5 md:w-2/3 bg-yellow-200/70 p-4 text-center rounded-lg"
-          >
-            تقدم لكم رابطة المستقلة، كل ما يخص طلبة كلية التربية من المستندات
-            اللازمة لمساعدتكم في دراساتكم الجامعية
-          </Title>
+      <Content className="pb-32 md:pb-12">
+        <div className="w-screen mt-8 flex justify-center items-center md:h-2/3 ">
+          <div className="md:h-full h-[600px] flex md:flex-row flex-col gap-6 items-center justify-between md:mx-20">
+            {/* <div className="bg-mostaqilla bg-cover bg-no-repeat bg-center w-72 h-44"></div> */}
+            <img
+              src={ScreenLogo}
+              alt="Logo"
+              className="rounded-full border-4 border-double border-[#125273] p-3"
+              width={400}
+              height={400}
+            />
+            <div className="flex flex-col md:items-end items-center gap-16">
+              <h1 className="tracking-wide text-[#125273]/80 text-5xl w-full font-bold md:text-right text-center rounded-lg md:w-2/3">
+                تقدم لكم قائمة المستقلة، كل ما يخص طلبة كلية التربية
+              </h1>
+              <div className="flex justify-center items-center relative -left-[70px] md:-left-0 md:-top-0 -top-8">
+                <iframe
+                  src="https://giphy.com/embed/vseiydvo5W9LX3b4tA"
+                  frameBorder="0"
+                  className="w-32 h-8 relative -top-2 -right-8 -rotate-12"
+                ></iframe>
+                <Link to="/majors">
+                  <button className="text-[#125273] border border-[#125273]/70 rounded-md p-3 text-2xl hover:bg-[#125273] hover:text-white">
+                    اذهب إلى التخصصات
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
+      </Content>
+      <div id="contact">
+        <Contact />
       </div>
+      <Footer style={{ textAlign: "center" }} className="text-[#125273]">
+        <div>مستقلة | 2024 &copy; جميع حقوق النشر محفوظة </div>
+      </Footer>
     </Layout>
     // <div className="w-full relative flex justify-center flex-col items-center">
     //   <div

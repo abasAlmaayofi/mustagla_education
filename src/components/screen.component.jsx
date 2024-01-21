@@ -1,7 +1,5 @@
 import React from "react";
-import ScreenImg from "../assets/Screen2.png";
-import { Button, Layout, Typography } from "antd";
-import MajorsAndContact from "./majorsAndContact.component";
+import { Layout, Typography } from "antd";
 import { Link, useLocation } from "react-router-dom";
 import Head2 from "./head2.components";
 import ScreenLogo from "../assets/ScreenLogo.png";

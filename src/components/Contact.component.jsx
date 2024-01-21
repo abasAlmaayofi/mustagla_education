@@ -1,15 +1,6 @@
 import React, { useRef, useState } from "react";
-import ContactImage from "../assets/Contact.png";
 import emailjs from "@emailjs/browser";
-import SloganImg from "../assets/Slogan.png";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Facebook,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Twitter, Instagram } from "lucide-react";
 import { notification } from "antd";
 
 const Contact = () => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Menu } from "antd";
-import WelcomeText from "../assets/WelcomeText.png";
 import { AlignLeft, AlignRight, Dot, Search, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";

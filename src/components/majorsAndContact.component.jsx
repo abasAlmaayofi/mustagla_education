@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import SloganImg from "../assets/Slogan.png";
+// import SloganImg from "../assets/Slogan.png";
 const MajorsAndContact = () => {
   const navigate = useNavigate();
 
   return (
     <>
       <div className="w-full h-auto absolute top-[300px] flex  gap-8 w-full justify-center items-center flex flex-col ">
-        <img src={SloganImg} alt="slogan" width={400} height={150} />
+        {/* <img src={SloganImg} alt="slogan" width={400} height={150} /> */}
         {/* <h2 className="py-4 text-3xl bg-[#f8e167]/80 text-black font-bold tracking-wide text-center p-4">
               تقدم لكم رابطة المستقلة، كل ما يخص طلبة كلية التربية{" "}
             </h2> */}

@@ -1,11 +1,10 @@
 import React from "react";
-import MajorsImg from "../assets/Majors.png";
-import ArabicImg from "../assets/elementry/arabic.png";
-import EnlgishImg from "../assets/elementry/english.png";
-import IslamicImg from "../assets/elementry/islamic.png";
-import SocialImg from "../assets/elementry/social.png";
-import MathImg from "../assets/elementry/math.png";
-import ScienceImg from "../assets/elementry/science.png";
+// import ArabicImg from "../assets/elementry/arabic.png";
+// import EnlgishImg from "../assets/elementry/english.png";
+// import IslamicImg from "../assets/elementry/islamic.png";
+// import SocialImg from "../assets/elementry/social.png";
+// import MathImg from "../assets/elementry/math.png";
+// import ScienceImg from "../assets/elementry/science.png";
 import { Tag } from "antd";
 
 const Majors = () => {
@@ -20,7 +19,7 @@ const Majors = () => {
             <Tag color="#108ee9">10 عدد الملفات</Tag>
           </h2>
           <div className="grid md:grid-cols-6 grid-cols-2 gap-4 mt-8">
-            <img
+            {/* <img
               src={ArabicImg}
               alt="arabic"
               width={200}
@@ -62,7 +61,7 @@ const Majors = () => {
               width={200}
               height={200}
               className="rounded-lg cursor-pointer hover:shadow-md shadow-black transition-all duration-150"
-            />
+            /> */}
           </div>
         </div>
       </div>

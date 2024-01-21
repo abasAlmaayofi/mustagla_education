@@ -1,21 +1,11 @@
 import React, { useState } from "react";
 import {
-  DesktopOutlined,
-  FileOutlined,
-  PieChartOutlined,
-  TeamOutlined,
-  UserOutlined,
-  SettingOutlined,
-  EditOutlined,
-  EllipsisOutlined,
   FontColorsOutlined,
   PoundCircleOutlined,
   UsergroupAddOutlined,
   CalculatorOutlined,
   ItalicOutlined,
-  LeftOutlined,
   DownloadOutlined,
-  ShareAltOutlined,
   FilePdfOutlined,
   FolderViewOutlined,
   MenuUnfoldOutlined,
@@ -32,13 +22,8 @@ import {
   Button,
   Typography,
 } from "antd";
-import ArabicImg from "../assets/elementry/arabic.png";
-import EnlgishImg from "../assets/elementry/english.png";
-import IslamicImg from "../assets/elementry/islamic.png";
-import SocialImg from "../assets/elementry/social.png";
-import MathImg from "../assets/elementry/math.png";
-import ScienceImg from "../assets/elementry/science.png";
-import { BookA, Users, Moon, Calculator, AlignRight, X } from "lucide-react";
+
+import { AlignRight, X } from "lucide-react";
 import MenuItem from "antd/es/menu/MenuItem";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";

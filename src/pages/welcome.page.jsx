@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import WelcomeBackground from "../assets/WelcomeBackground.png";
 import Welcome from "../assets/Welcome.png";
-import WelcomeText from "../assets/WelcomeText.png";
-import Logo from "../assets/Logo-1.png";
-import { Button, FloatButton } from "antd";
+
+import { FloatButton } from "antd";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Instagram, LayoutGrid, Twitter } from "lucide-react";
 import {

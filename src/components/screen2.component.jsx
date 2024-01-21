@@ -1,9 +1,5 @@
 import React from "react";
-import ScreenImg from "../assets/Screen2.png";
-import { Button } from "antd";
-import MajorsAndContact from "./majorsAndContact.component";
 import { useLocation } from "react-router-dom";
-import MajorsImg from "../assets/majors.png";
 // bg-[#e9ebec]  via-[#e6e6e5] to-[#eaebec] bg-gradient-to-b
 const Screen2 = () => {
   const location = useLocation();

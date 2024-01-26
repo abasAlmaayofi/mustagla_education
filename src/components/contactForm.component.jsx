@@ -4,6 +4,8 @@ import emailjs from "@emailjs/browser";
 // import SloganImg from "../assets/Slogan.png";
 import { Mail, Phone, MapPin, Twitter, Instagram } from "lucide-react";
 import { notification } from "antd";
+import { FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const ContactForm = () => {
   const [subject, setSubject] = useState();
@@ -66,66 +68,66 @@ const ContactForm = () => {
               تقدم لكم رابطة المستقلة، كل ما يخص طلبة كلية التربية{" "}
             </h2> */}
       {/* </div> */}
-      <div className="absolute top-[270px] w-full h-auto pt-12 pb-20 bg-transparent flex flex-col px-8 gap-8 justify-center items-center ">
+      <div className="w-full h-auto pb-20 bg-transparent flex flex-col px-8 gap-8 justify-center items-center ">
         <div className="w-full flex flex-col justify-center items-center gap-4">
-          <h1 className="font-bold text-3xl text-[#1e89c1] tracking-wide border-b border-[#1e89c1]">
-            تواصل معنا
-          </h1>
-          <p className="tracking-wide text-gray-900  p-2 rounded-md">
+          <p className="tracking-wide text-[#125273] p-2 rounded-md">
             أي سؤال أو ملاحظة؟ فقط قم بكتابة رسالة لنا
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row bg-[#F4DA5E]/70 p-3 px-4 rounded-lg">
+        <div className="flex flex-col md:flex-row bg-[#F5F5F5]/70 p-3 px-4 rounded-lg">
           <div className="w-[370px] p-4">
             <div className="flex flex-col gap-2 justify-end items-end mb-12">
-              <h1 className="text-bold text-black text-2xl tracking-wide">
+              <h1 className="text-bold text-[#125273] text-2xl tracking-wide">
                 معلومات التواصل
               </h1>
-              <p className="text-black tracking-wide">
+              <p className="text-[#125273] tracking-wide">
                 لا تتردد في ارسال رسالة لنا
               </p>
               <hr class="mt-4 w-full h-[0.5px] border-t-0 bg-tranparent bg-gradient-to-r from-transparent via-black to-transparent opacity-25 dark:opacity-100" />
             </div>
 
-            <div className="w-full flex justify-end mb-8 gap-3 text-black">
+            <div className="w-full flex justify-end mb-8 gap-3 text-[#125273]">
               <h2>+965 55050050</h2>
               <Phone />
             </div>
-            <div className="w-full flex justify-end mb-8 gap-3 text-black">
+            <div className="w-full flex justify-end mb-8 gap-3 text-[#125273]">
               {" "}
-              <h2>mostaqillaedu@gmail.com</h2>
+              <h2>mostaqillaedu.ku@gmail.com</h2>
               <Mail />
             </div>
-            <div className="w-full flex justify-end mb-8 gap-3 text-black">
+            <div className="w-full flex justify-end mb-8 gap-3 text-[#125273]">
               {" "}
               <h2>جامعة الكويت، كلية التربية</h2>
               <MapPin />
             </div>
 
-            <div className="w-full flex justify-end mb-2 mt-12 gap-3 text-black/80">
-              <a
-                href=""
-                className="p-3 rounded-full bg-black/10 backdrop-blur-md bg-opacity-30"
-              >
-                <Twitter size={28} strokeWidth={1.5} />
-              </a>
-              <a
-                href=""
-                className="p-3 rounded-full bg-black/10 backdrop-blur-md bg-opacity-30"
-              >
-                <Instagram size={28} strokeWidth={1.5} />
-              </a>{" "}
+            <div className="w-full flex justify-end mb-2 mt-12 gap-3 text-[#125273]/80">
+              <Link to="https://www.tiktok.com/@mostaqillaedu">
+                <button className="border text-[#125273] backdrop-blur-md p-1 flex items-center text-[#125273] rounded-lg text-lg">
+                  <FaTiktok />{" "}
+                </button>
+              </Link>
+              <Link to="https://twitter.com/mostaqillaedu?lang=en">
+                <button className="border text-[#125273] backdrop-blur-md p-1 flex items-center text-[#125273] rounded-lg text-lg">
+                  <FaTwitter />
+                </button>
+              </Link>
+              <Link to="https://www.youtube.com/channel/UCbfivDRsmeNktkaWSRU-N7g">
+                <button className="border text-[#125273] backdrop-blur-md p-1 flex items-center text-[#125273] rounded-lg text-lg">
+                  <FaYoutube />
+                </button>
+              </Link>
             </div>
           </div>
-          <div className="w-[370px] mt-3 h-full border-t md:border-l md:border-t-0 border-black/20">
+          <div className="w-[370px] mt-3 h-full border-t md:border-l md:border-t-0 border-[#125273]/20">
             <form
               ref={form}
               action=""
               className="w-full h-full"
               onSubmit={sendEmail}
             >
-              <div className="flex flex-col gap-2 my-6 text-black font-[30px]">
+              <div className="flex flex-col gap-2 my-6 text-[#125273] font-[30px]">
                 <label
                   htmlFor="subject"
                   className="text-xl tracking-wide text-right"
@@ -139,10 +141,10 @@ const ContactForm = () => {
                   onChange={(e) => setSubject(e.target.value)}
                   name="subject"
                   id="subject"
-                  className="border-b border-black rounded-none ml-20 outline-none text-right bg-transparent text-black/70 tracking-wide"
+                  className="border-b border-[#125273]/40 rounded-none ml-20 outline-none text-right bg-transparent text-black/70 tracking-wide"
                 />
               </div>
-              <div className="flex flex-col gap-2 my-6 text-black font-[30px]">
+              <div className="flex flex-col gap-2 my-6 text-[#125273] font-[30px]">
                 <label
                   htmlFor="email"
                   className="text-xl tracking-wide text-right"
@@ -156,10 +158,10 @@ const ContactForm = () => {
                   onChange={(e) => setEmail(e.target.value)}
                   name="email"
                   id="email"
-                  className="border-b border-black rounded-none ml-20 outline-none text-right bg-transparent text-black/70 tracking-wide"
+                  className="border-b border-[#125273]/40 rounded-none ml-20 outline-none text-right bg-transparent text-[#125273]/70 tracking-wide"
                 />
               </div>
-              <div className="flex flex-col gap-2 my-6 text-black font-[30px]">
+              <div className="flex flex-col gap-2 my-6 text-[#125273] font-[30px]">
                 <label
                   htmlFor="message"
                   className="text-xl tracking-wide text-right"
@@ -173,13 +175,13 @@ const ContactForm = () => {
                   onChange={(e) => setMessage(e.target.value)}
                   name="message"
                   id="message"
-                  className="border-b border-black rounded-none ml-20 outline-none text-right bg-transparent text-black/70 tracking-wide h-8"
+                  className="border-b border-[#125273]/40 rounded-none ml-20 outline-none text-right bg-transparent text-[#125273]/70 tracking-wide h-8"
                 />
               </div>
               <div className="w-full text-right mt-16">
                 <button
                   type="submit"
-                  className="px-16 py-3 text-xl bg-black text-white cursor-pointer hover:bg-black/70 rounded-md"
+                  className="px-16 py-3 text-xl bg-[#125273] text-white cursor-pointer hover:bg-[#125273]/70 rounded-md"
                 >
                   إرسال
                 </button>

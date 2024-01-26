@@ -7,7 +7,7 @@ import { getDownloadURL, ref } from "firebase/storage";
 import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
-const Arabic = () => {
+const Geography = () => {
   const [link, setLink] = useState(null);
   const fetchUrl = (path) => {
     getDownloadURL(ref(storage, path))
@@ -26,7 +26,7 @@ const Arabic = () => {
       <div className="w-full pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-8">
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
-            تخصص اللغة العربية
+            تخصص جغرافية
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
           <Link to={link}>
@@ -77,4 +77,4 @@ const Arabic = () => {
   );
 };
 
-export default Arabic;
+export default Geography;

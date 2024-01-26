@@ -32,7 +32,7 @@ const WelcomePage = () => {
           exit={{ x: -1000 }}
           transition={{ type: "string", stiffness: 40 }}
         >
-          <div className="w-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-cover bg-background-welcome bg-center">
+          <div className="w-screen md:h-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-background-welcome bg-center bg-cover">
             <div
               className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
               onClick={() => setShowMedia((val) => !val)}
@@ -88,13 +88,13 @@ const WelcomePage = () => {
                 alt="Mustagla Education"
                 className="w-[400px] h-[400px] md:block hidden rounded-full relative -top-20"
               /> */}
-              <img
+              {/* <img
                 src={ScreenLogo}
                 alt="Logo"
                 className="rounded-full border-4 border-double border-[#125273] p-3 relative -top-20 md:block hidden"
                 width={400}
                 height={400}
-              />
+              /> */}
               {/* <img
                 src={Welcome}
                 alt="Mustagla Education"
@@ -105,7 +105,7 @@ const WelcomePage = () => {
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 40 }}
                 onClick={OnClick}
-                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 top-[518px] text-white/80 flex justify-center items-center shadow-md shadow-gray-500/50"
+                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[518px] text-white/80 flex justify-center items-center shadow-md shadow-gray-500/50"
               >
                 <ChevronRight size={38} className="" />
                 {/* <h1 className="text-3xl tracking-wide text-[#1e89c1] md:block hidden">

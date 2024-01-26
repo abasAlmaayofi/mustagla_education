@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/header.component";
 import Footer3 from "../components/Footer3.component";
 import VideoBackground from "../components/video.component";
+import { getDownloadURL, ref } from "firebase/storage";
+import storage from "../libs/firebase";
+import { Link } from "react-router-dom";
 
 const Transfer = () => {
+  const [link, setLink] = useState(null);
+  const fetchUrl = (path) => {
+    getDownloadURL(ref(storage, path))
+      .then((url) => {
+        setLink(url);
+      })
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    fetchUrl("تصريح الزيارة الميدانية.pdf");
+  }, []);
   return (
     <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
       <Header />
@@ -12,18 +26,29 @@ const Transfer = () => {
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
             شروط التحويل
           </h1>
-          <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] text-[125273] py-2 ">
-            داخلي - 2021 وما بعد
-          </button>
-          <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] text-[125273] py-2 ">
-            خارجي - 2021 وما بعد
-          </button>
-          <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] text-[125273] py-2 ">
-            داخلي - 2020 وما قبل
-          </button>
-          <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] text-[125273] py-2 ">
-            خارجي - 2020 وما قبل
-          </button>
+          <Link to={link}>
+            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
+              داخلي - 2021 وما بعد
+            </button>
+          </Link>
+
+          <Link to={link}>
+            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
+              خارجي - 2021 وما بعد
+            </button>
+          </Link>
+
+          <Link to={link}>
+            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
+              داخلي - 2020 وما قبل
+            </button>
+          </Link>
+
+          <Link to={link}>
+            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
+              خارجي - 2020 وما قبل
+            </button>
+          </Link>
         </div>
         <div className="mt-8 flex flex-col gap-4 justify-center items-center">
           <VideoBackground text="شلون أحول؟" />

@@ -141,7 +141,7 @@ const ContactForm = () => {
                   onChange={(e) => setSubject(e.target.value)}
                   name="subject"
                   id="subject"
-                  className="border-b border-[#125273]/40 rounded-none ml-20 outline-none text-right bg-transparent text-black/70 tracking-wide"
+                  className="border-b border-[#125273]/40 rounded-none ml-20 outline-none text-right bg-transparent text-[#125273]/70 tracking-wide"
                 />
               </div>
               <div className="flex flex-col gap-2 my-6 text-[#125273] font-[30px]">

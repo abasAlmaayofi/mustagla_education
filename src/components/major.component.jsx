@@ -6,7 +6,7 @@ const Major = ({ title, description, img, val, setVal, link }) => {
   return (
     <>
       {/* PHILOSOPHY */}
-      <div className="w-[400px] h-[200px] rounded-xl flex justify-center relative border border-[#125273]/10">
+      <div className="w-[400px] h-[200px] rounded-xl flex justify-center relative">
         <h1 className="absolute text-xl text-white bg-[#125273] rounded-md px-6 tracking-wide mt-4">
           {title}{" "}
         </h1>

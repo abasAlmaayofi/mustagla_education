@@ -7,7 +7,7 @@ import { getDownloadURL, ref } from "firebase/storage";
 import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
-const Arabic = () => {
+const Kindergarten = () => {
   const [link, setLink] = useState(null);
   const fetchUrl = (path) => {
     getDownloadURL(ref(storage, path))
@@ -20,15 +20,15 @@ const Arabic = () => {
     fetchUrl("تصريح الزيارة الميدانية.pdf");
   }, []);
   return (
-    <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
+    <div className="w-screen  bg-WelcomeBackground bg-cover bg-center">
       <Header />
 
-      <div className="w-full pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-center items-center">
+      <div className="w-full h-[calc(90vh)] pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-center items-center">
         <div className="flex flex-col justify-center items-center gap-8">
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
-            تخصص اللغة العربية
+            تخصص رياض الأطفال
           </h1>
-          <h2 className="text-xl underline">برنامج الابتدائي </h2>
+          {/* <h2 className="text-xl underline">برنامج الابتدائي </h2> */}
           <Link to={link}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
               <File /> نبذة تعريفية عن المقررات{" "}
@@ -49,7 +49,7 @@ const Arabic = () => {
               <File /> صحيفة التخرج{" "}
             </button>
           </Link>
-          <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
+          {/* <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <Link to={link}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
               <File /> نبذة تعريفية عن المقررات{" "}
@@ -69,7 +69,7 @@ const Arabic = () => {
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
               <File /> صحيفة التخرج{" "}
             </button>
-          </Link>
+          </Link> */}
         </div>
         <Footer3 />
       </div>
@@ -77,4 +77,4 @@ const Arabic = () => {
   );
 };
 
-export default Arabic;
+export default Kindergarten;

@@ -38,6 +38,7 @@ const Header = () => {
             />
           </div>
           <div>
+            <div className="w-28 h-12 relative -right-5 bg-mostaqilla-stripped bg-center bg-contain bg-no-repeat"></div>
             {/* <div
               className="text-black bg-transparent p-3 flex gap-2 cursor-pointer font-light"
               onClick={() => setShowSearch((val) => !val)}
@@ -54,14 +55,15 @@ const Header = () => {
                 className="bg-transparent border-b rounded-none outline-none mb-3 border-gray-500 mr-4 text-right text-white/70"
               />
             </div> */}
-            <Button
+            {/* <Button
               size="lg"
               type="ghost"
               shape="circle"
               className="shadow-none text-[#125273]"
               icon={<Search />}
               onClick={() => setShowSidebar(true)}
-            />
+            /> */}
+
             {/* <span className="md:text-2xl text-xl text-[#1b7bad] font-bold uppercase">
               MostaqillaEDU
             </span> */}
@@ -194,7 +196,7 @@ const Header = () => {
                 </h1>
               </Link>
               <Link
-                to="/home#contact"
+                to="/contact"
                 onClick={(e) => setPage(e.target.name)}
                 // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
                 //   page == "contactpage" ? "font-bold " : ""

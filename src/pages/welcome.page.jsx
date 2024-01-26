@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import Welcome from "../assets/Welcome.png";
+// import Welcome from "../assets/Welcome.png";
+import { FaTiktok, FaYoutube } from "react-icons/fa";
 
-import { FloatButton } from "antd";
+import { Button, FloatButton } from "antd";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Instagram, LayoutGrid, Twitter } from "lucide-react";
 import {
@@ -31,12 +32,12 @@ const WelcomePage = () => {
           exit={{ x: -1000 }}
           transition={{ type: "string", stiffness: 40 }}
         >
-          <div className="w-screen h-screen relative flex justify-center items-center bg-[#F5F5F5]">
+          <div className="w-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-cover bg-background-welcome bg-center">
             <div
               className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
               onClick={() => setShowMedia((val) => !val)}
             >
-              <FloatButton.Group
+              {/* <FloatButton.Group
                 trigger="click"
                 type="outlined"
                 style={{ right: 0, top: 0 }}
@@ -44,7 +45,7 @@ const WelcomePage = () => {
               >
                 <FloatButton icon={<InstagramOutlined />} />
                 <FloatButton icon={<TwitterOutlined />} />
-              </FloatButton.Group>
+              </FloatButton.Group> */}
               {/* <AnimatePresence>
                 {showMedia ? (
                   <>
@@ -90,27 +91,44 @@ const WelcomePage = () => {
               <img
                 src={ScreenLogo}
                 alt="Logo"
-                className="rounded-full border-4 border-double border-[#125273] p-3 relative -top-20"
+                className="rounded-full border-4 border-double border-[#125273] p-3 relative -top-20 md:block hidden"
                 width={400}
                 height={400}
               />
-              <img
+              {/* <img
                 src={Welcome}
                 alt="Mustagla Education"
                 className="absolute top-0 z-0 w-screen h-screen object-cover md:hidden block"
-              />
+              /> */}
               <motion.div
                 initial={{ y: 1000 }}
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 40 }}
                 onClick={OnClick}
-                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 top-[550px] text-white/80 flex justify-center items-center shadow-md shadow-gray-500/50"
+                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 top-[518px] text-white/80 flex justify-center items-center shadow-md shadow-gray-500/50"
               >
                 <ChevronRight size={38} className="" />
                 {/* <h1 className="text-3xl tracking-wide text-[#1e89c1] md:block hidden">
                   دخول
                 </h1> */}
               </motion.div>
+            </div>
+            <div className="absolute bottom-0 mb-8 flex gap-4 right-4">
+              <Link to="https://www.tiktok.com/@mostaqillaedu">
+                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                  <FaTiktok />{" "}
+                </button>
+              </Link>
+              <Link to="https://twitter.com/mostaqillaedu?lang=en">
+                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                  <TwitterOutlined />
+                </button>
+              </Link>
+              <Link to="https://www.youtube.com/channel/UCbfivDRsmeNktkaWSRU-N7g">
+                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                  <FaYoutube />
+                </button>
+              </Link>
             </div>
             {/* <img
           src={WelcomeBackground}

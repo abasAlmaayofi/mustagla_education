@@ -22,6 +22,7 @@ import Philosophy from "./pages/philosophy.page";
 import Science from "./pages/science.page";
 import Kindergarten from "./pages/kindergarten.page";
 import Psychology from "./pages/psychology.page";
+import Math from "./pages/math.page";
 
 function App() {
   return (

@@ -4,7 +4,7 @@ import emailjs from "@emailjs/browser";
 // import SloganImg from "../assets/Slogan.png";
 import { Mail, Phone, MapPin, Twitter, Instagram } from "lucide-react";
 import { notification } from "antd";
-import { FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaTwitter, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ContactForm = () => {
@@ -88,7 +88,14 @@ const ContactForm = () => {
             </div>
 
             <div className="w-full flex justify-end mb-8 gap-3 text-[#125273]">
-              <h2>+965 55050050</h2>
+              <div className="flex border-r-[1px] border-[#125273]/30 pr-2">
+                <h2 className="mr-1 text-[15px]">+965 94919900</h2>
+                <h2>طالبات</h2>
+              </div>
+              <div className="flex">
+                <h2 className="mr-1 text-[15px]">+965 50803558</h2>
+                <h2>طلبة</h2>
+              </div>
               <Phone />
             </div>
             <div className="w-full flex justify-end mb-8 gap-3 text-[#125273]">
@@ -113,7 +120,12 @@ const ContactForm = () => {
                   <FaTwitter />
                 </button>
               </Link>
-              <Link to="https://www.youtube.com/channel/UCbfivDRsmeNktkaWSRU-N7g">
+              <Link to="https://www.instagram.com/mostaqillaedu_?igsh=NTc4MTIwNjQ2YQ==">
+                <button className="border text-[#125273] backdrop-blur-md p-1 flex items-center text-[#125273] rounded-lg text-lg">
+                  <FaInstagram />
+                </button>
+              </Link>
+              <Link to="https://www.youtube.com/@mostaqillaEDU">
                 <button className="border text-[#125273] backdrop-blur-md p-1 flex items-center text-[#125273] rounded-lg text-lg">
                   <FaYoutube />
                 </button>

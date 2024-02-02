@@ -8,7 +8,6 @@ import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
 const English = () => {
-  const [link, setLink] = useState(null);
   const fetchUrl = (path) => {
     getDownloadURL(ref(storage, path))
       .then((url) => {
@@ -29,6 +28,11 @@ const English = () => {
             تخصص اللغة الانجليزية
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
+          <Link to={arabicSummary}>
+            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+              <File /> نبذة تعريفية عن التخصص{" "}
+            </button>
+          </Link>
           <Link to={link}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
               <File /> نبذة تعريفية عن المقررات{" "}
@@ -51,6 +55,11 @@ const English = () => {
           </Link>
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
+            <Link to={arabicSummary}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن التخصص{" "}
+              </button>
+            </Link>
             <Link to={link}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}

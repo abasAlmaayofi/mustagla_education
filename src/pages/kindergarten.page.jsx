@@ -9,6 +9,9 @@ import Footer3 from "../components/Footer3.component";
 
 const Kindergarten = () => {
   const [kindergartenSummary, setKindergartenSummary] = useState(null);
+  const [kidnergartenBestPrs, setKindergartenBestPrs] = useState(null);
+  const [kindergartenCourseGraduate, setKindergartenCourseGraduate] =
+    useState(null);
   const fetchUrl = (path, setLink) => {
     getDownloadURL(ref(storage, path))
       .then((url) => {
@@ -18,6 +21,8 @@ const Kindergarten = () => {
   };
   useEffect(() => {
     fetchUrl("kindergartenSummary.png", setKindergartenSummary);
+    fetchUrl("kindergartenBestPrs.pdf", setKindergartenBestPrs);
+    fetchUrl("kindergartenCourseGraduate.png", setKindergartenCourseGraduate);
   }, []);
   return (
     <div className="w-screen  bg-WelcomeBackground bg-cover bg-center">
@@ -40,7 +45,7 @@ const Kindergarten = () => {
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={kindergartenSummary}>
+            <Link to={kidnergartenBestPrs}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>

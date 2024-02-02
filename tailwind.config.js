@@ -9,6 +9,7 @@ export default {
         mostaqilla: "url('/mostaqilla-removed-bg.png')",
         "mostaqilla-stripped": "url('/mostaqilla-stripped.png')",
         "background-welcome": "url('/Welcome.png')",
+        "background-welcome2": "url('/Welcome2.png')",
         WelcomeBackground: "url('/WelcomeBackground.png')",
         ScreenLogo: "url('/ScreenLogo.png')",
       },

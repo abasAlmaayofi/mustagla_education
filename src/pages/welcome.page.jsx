@@ -32,12 +32,13 @@ const WelcomePage = () => {
           exit={{ x: -1000 }}
           transition={{ type: "string", stiffness: 40 }}
         >
-          <div className="w-screen md:h-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-background-welcome bg-center bg-cover">
-            <div
-              className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
-              onClick={() => setShowMedia((val) => !val)}
-            >
-              {/* <FloatButton.Group
+          <div className="w-screen md:h-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-background-welcome2 bg-center bg-cover">
+            <div className="w-screen md:h-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-background-welcome bg-center bg-cover">
+              <div
+                className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
+                onClick={() => setShowMedia((val) => !val)}
+              >
+                {/* <FloatButton.Group
                 trigger="click"
                 type="outlined"
                 style={{ right: 0, top: 0 }}
@@ -46,7 +47,7 @@ const WelcomePage = () => {
                 <FloatButton icon={<InstagramOutlined />} />
                 <FloatButton icon={<TwitterOutlined />} />
               </FloatButton.Group> */}
-              {/* <AnimatePresence>
+                {/* <AnimatePresence>
                 {showMedia ? (
                   <>
                     <motion.div
@@ -74,70 +75,71 @@ const WelcomePage = () => {
                   ""
                 )}
               </AnimatePresence> */}
-              {/* <div
+                {/* <div
                 className={`${
                   showMedia ? "bg-white/30" : ""
                 } p-3 rounded-full text-gray-500/80`}
               >
                 <LayoutGrid size={18} />
               </div> */}
-            </div>
-            <div className="flex jusitfy-center gap-8  items-center flex-col z-10 w-screen">
-              {/* <img
+              </div>
+              <div className="flex jusitfy-center gap-8  items-center flex-col z-10 w-screen">
+                {/* <img
                 src={Logo}
                 alt="Mustagla Education"
                 className="w-[400px] h-[400px] md:block hidden rounded-full relative -top-20"
               /> */}
-              {/* <img
+                {/* <img
                 src={ScreenLogo}
                 alt="Logo"
                 className="rounded-full border-4 border-double border-[#125273] p-3 relative -top-20 md:block hidden"
                 width={400}
                 height={400}
               /> */}
-              {/* <img
+                {/* <img
                 src={Welcome}
                 alt="Mustagla Education"
                 className="absolute top-0 z-0 w-screen h-screen object-cover md:hidden block"
               /> */}
-              <motion.div
-                initial={{ y: 1000 }}
-                animate={{ y: 0 }}
-                transition={{ type: "spring", stiffness: 40 }}
-                onClick={OnClick}
-                className="rounded-lg text-3xl w-24 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[518px] text-white/80 flex justify-center items-center shadow-sm shadow-gray-500/90 "
-              >
-                {/* <ChevronRight size={38} className="" /> */}
-                <h1 className="text-3xl tracking-wide">إضغط</h1>
-              </motion.div>
-            </div>
-            <div className="absolute bottom-0 mb-8 flex gap-4 right-4">
-              <Link to="https://www.tiktok.com/@mostaqillaedu">
-                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
-                  <FaTiktok />{" "}
-                </button>
-              </Link>
-              <Link to="https://twitter.com/mostaqillaedu?lang=en">
-                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
-                  <TwitterOutlined />
-                </button>
-              </Link>{" "}
-              <Link to="https://www.instagram.com/mostaqillaedu_?igsh=NTc4MTIwNjQ2YQ==">
-                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
-                  <FaInstagram />
-                </button>
-              </Link>
-              <Link to="https://www.youtube.com/@mostaqillaEDU">
-                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
-                  <FaYoutube />
-                </button>
-              </Link>
-            </div>
-            {/* <img
+                <motion.div
+                  initial={{ y: 1000 }}
+                  animate={{ y: 0 }}
+                  transition={{ type: "spring", stiffness: 40 }}
+                  onClick={OnClick}
+                  className="rounded-lg text-3xl w-24 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[518px] text-white/80 flex justify-center items-center shadow-sm shadow-gray-500/90 "
+                >
+                  {/* <ChevronRight size={38} className="" /> */}
+                  <h1 className="text-3xl tracking-wide">إضغط</h1>
+                </motion.div>
+              </div>
+              <div className="absolute bottom-0 mb-8 flex gap-4 right-4">
+                <Link to="https://www.tiktok.com/@mostaqillaedu">
+                  <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                    <FaTiktok />{" "}
+                  </button>
+                </Link>
+                <Link to="https://twitter.com/mostaqillaedu?lang=en">
+                  <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                    <TwitterOutlined />
+                  </button>
+                </Link>{" "}
+                <Link to="https://www.instagram.com/mostaqillaedu_?igsh=NTc4MTIwNjQ2YQ==">
+                  <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                    <FaInstagram />
+                  </button>
+                </Link>
+                <Link to="https://www.youtube.com/@mostaqillaEDU">
+                  <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                    <FaYoutube />
+                  </button>
+                </Link>
+              </div>
+              {/* <img
           src={WelcomeBackground}
           alt="Education Collage"
           className="w-screen h-screen absolute top-0 z-0 object-fill"
         /> */}
+            </div>
           </div>
         </motion.div>
       ) : (

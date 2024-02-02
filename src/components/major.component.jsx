@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Major = ({ title, description, img, val, setVal, link }) => {
   return (
-    <>
+    <Link to={link}>
       {/* PHILOSOPHY */}
       <div className="w-[400px] h-[200px] rounded-xl flex justify-center relative">
         <h1 className="absolute text-xl text-white bg-[#125273] rounded-md px-6 tracking-wide mt-4">
@@ -19,7 +19,7 @@ const Major = ({ title, description, img, val, setVal, link }) => {
         />
         <div className="absolute top-0 w-[400px] h-[200px] rounded-xl bg-[#125273]/30 mix-blend-color"></div>
         <div className="absolute top-0 w-[400px] h-[200px] rounded-xl bg-[#F5F5F5]/20 "></div>
-        <div className="absolute bottom-0 ">
+        {/* <div className="absolute bottom-0 ">
           <button
             name={title}
             onClick={() => setVal((val) => !val)}
@@ -27,9 +27,9 @@ const Major = ({ title, description, img, val, setVal, link }) => {
           >
             {val ? <ChevronUp /> : <ChevronDown />}
           </button>
-        </div>
+        </div> */}
       </div>
-      <div
+      {/* <div
         className={`${
           val ? "h-64" : "h-0"
         } w-[400px] overflow-hidden transition ease-in-out delay-150 text-right text-[#125273] mx-4`}
@@ -42,9 +42,9 @@ const Major = ({ title, description, img, val, setVal, link }) => {
             </button>
           </Link>
         </div>
-      </div>
+      </div> */}
       {/* END */}
-    </>
+    </Link>
   );
 };
 

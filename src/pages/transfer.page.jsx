@@ -7,8 +7,15 @@ import storage from "../libs/firebase";
 import { Link } from "react-router-dom";
 
 const Transfer = () => {
-  const [link, setLink] = useState(null);
-  const fetchUrl = (path) => {
+  const [internalTransfer, setInternalTransfer] = useState(null);
+  const [externalTransfer, setExternalTransfer] = useState(null);
+  const [facilitateInternalTransfer, setFacilitateInternalTransfer] =
+    useState(null);
+  const [facilitateExternalTransfer, setFacilitateExternalTransfer] =
+    useState(null);
+  const [transferMethod, setTransferMethod] = useState(null);
+
+  const fetchUrl = (path, setLink) => {
     getDownloadURL(ref(storage, path))
       .then((url) => {
         setLink(url);
@@ -16,7 +23,11 @@ const Transfer = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    fetchUrl("تصريح الزيارة الميدانية.pdf");
+    fetchUrl("internalTransfer.jpeg", setInternalTransfer);
+    fetchUrl("externalTransfer.jpeg", setExternalTransfer);
+    fetchUrl("facilitateExternalTransfer.jpeg", setFacilitateExternalTransfer);
+    fetchUrl("facilitateInternalTransfer.jpeg", setFacilitateInternalTransfer);
+    fetchUrl("transferMethod.jpeg", setTransferMethod);
   }, []);
   return (
     <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
@@ -26,32 +37,34 @@ const Transfer = () => {
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
             شروط التحويل
           </h1>
-          <Link to={link}>
+          <Link to={internalTransfer}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               داخلي - 2021 وما بعد
             </button>
           </Link>
 
-          <Link to={link}>
+          <Link to={externalTransfer}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               خارجي - 2021 وما بعد
             </button>
           </Link>
 
-          <Link to={link}>
+          <Link to={facilitateInternalTransfer}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
-              داخلي - 2020 وما قبل
+              مواد تسهل للتحويل الداخلي في كلية التربية{" "}
             </button>
           </Link>
 
-          <Link to={link}>
+          <Link to={facilitateExternalTransfer}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
-              خارجي - 2020 وما قبل
+              مواد تسهل للتحويل خارجي إلى كلية التربية
             </button>
           </Link>
         </div>
         <div className="mt-8 flex flex-col gap-4 justify-center items-center">
-          <VideoBackground text="شلون أحول؟" />
+          <Link to={transferMethod} className="border-none">
+            <VideoBackground text="طريقة التحويل" />
+          </Link>
           <div className="w-full flex justify-center flex-col items-center mt-6 gap-2">
             <div className="w-[200px] h-20 bg-contain bg-center bg-no-repeat bg-mostaqilla-stripped z-20 md:ml-32 ml-0"></div>
 

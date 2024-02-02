@@ -29,47 +29,51 @@ const Math = () => {
             تخصص الرياضيات
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> نبذة تعريفية عن المقررات{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> أفضل الدكاترة{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> مسبقات المواد{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> صحيفة التخرج{" "}
-            </button>
-          </Link>
+          <div className="flex flex-col flex-col-reverse gap-8">
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن المقررات{" "}
+              </button>
+            </Link>
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> أفضل الدكاترة{" "}
+              </button>
+            </Link>
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> مسبقات المواد{" "}
+              </button>
+            </Link>
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> صحيفة التخرج{" "}
+              </button>
+            </Link>
+          </div>
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> نبذة تعريفية عن المقررات{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> أفضل الدكاترة{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> مسبقات المواد{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> صحيفة التخرج{" "}
-            </button>
-          </Link>
+          <div className="flex flex-col flex-col-reverse gap-8">
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن المقررات{" "}
+              </button>
+            </Link>
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> أفضل الدكاترة{" "}
+              </button>
+            </Link>
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> مسبقات المواد{" "}
+              </button>
+            </Link>
+            <Link to={link}>
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> صحيفة التخرج{" "}
+              </button>
+            </Link>
+          </div>
         </div>
         <Footer3 />
       </div>

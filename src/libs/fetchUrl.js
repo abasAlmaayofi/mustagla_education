@@ -1,10 +1,10 @@
 import { getDownloadURL, ref } from "firebase/storage";
 import storage from "./firebase";
 
-const fetchUrl = (path) => {
+const fetchUrl = (path, setLink) => {
   getDownloadURL(ref(storage, path))
     .then((url) => {
-      return url;
+      setLink(url);
     })
     .catch((err) => console.log(err));
 };

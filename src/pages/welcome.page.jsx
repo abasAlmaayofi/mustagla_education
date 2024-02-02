@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 // import Welcome from "../assets/Welcome.png";
-import { FaTiktok, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 
 import { Button, FloatButton } from "antd";
 import { AnimatePresence, motion } from "framer-motion";
@@ -105,12 +105,10 @@ const WelcomePage = () => {
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 40 }}
                 onClick={OnClick}
-                className="rounded-full text-3xl w-12 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[518px] text-white/80 flex justify-center items-center shadow-md shadow-gray-500/50"
+                className="rounded-lg text-3xl w-24 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[518px] text-white/80 flex justify-center items-center shadow-sm shadow-gray-500/90 "
               >
-                <ChevronRight size={38} className="" />
-                {/* <h1 className="text-3xl tracking-wide text-[#1e89c1] md:block hidden">
-                  دخول
-                </h1> */}
+                {/* <ChevronRight size={38} className="" /> */}
+                <h1 className="text-3xl tracking-wide">إضغط</h1>
               </motion.div>
             </div>
             <div className="absolute bottom-0 mb-8 flex gap-4 right-4">
@@ -123,8 +121,13 @@ const WelcomePage = () => {
                 <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
                   <TwitterOutlined />
                 </button>
+              </Link>{" "}
+              <Link to="https://www.instagram.com/mostaqillaedu_?igsh=NTc4MTIwNjQ2YQ==">
+                <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
+                  <FaInstagram />
+                </button>
               </Link>
-              <Link to="https://www.youtube.com/channel/UCbfivDRsmeNktkaWSRU-N7g">
+              <Link to="https://www.youtube.com/@mostaqillaEDU">
                 <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
                   <FaYoutube />
                 </button>

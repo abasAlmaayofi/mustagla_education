@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "background-pattern": "url('/pattern.png')",
-        "background-kuwait-university": "url('/kuwait-university-1.jpeg')",
+        "background-kuwait-university": "url('/kuwait-university-1.jpg')",
         mostaqilla: "url('/mostaqilla-removed-bg.png')",
         "mostaqilla-stripped": "url('/mostaqilla-stripped.png')",
         "background-welcome": "url('/Welcome.jpg')",

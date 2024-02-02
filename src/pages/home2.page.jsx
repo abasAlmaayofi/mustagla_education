@@ -27,7 +27,7 @@ const Home2 = () => {
   useEffect(() => {
     // fetchUrl("تصريح الزيارة الميدانية.pdf", setCollageInformation);
     fetchUrl("معلومات جامعية 💛💙.pdf", setCollageInformation);
-    fetchUrl("gradingSystem.png", setGradingSystem);
+    fetchUrl("WhatsApp Image 2024-02-02 at 6.20.28 PM.jpeg", setGradingSystem);
     fetchUrl("نبذ عن المقررات العامة 💛💙.pdf", setCourseSummary);
     fetchUrl(
       "WhatsApp Video 2024-02-02 at 7.48.32 PM.mp4",

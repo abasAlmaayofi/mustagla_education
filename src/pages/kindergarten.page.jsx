@@ -12,6 +12,9 @@ const Kindergarten = () => {
   const [kidnergartenBestPrs, setKindergartenBestPrs] = useState(null);
   const [kindergartenCourseGraduate, setKindergartenCourseGraduate] =
     useState(null);
+  const [kindergartenPrevCourses, setKindergartenPrevCourses] = useState(null);
+  const [kindergartenCoursesDescription, setKindergartenCoursesDescription] =
+    useState(null);
   const fetchUrl = (path, setLink) => {
     getDownloadURL(ref(storage, path))
       .then((url) => {
@@ -23,6 +26,11 @@ const Kindergarten = () => {
     fetchUrl("kindergartenSummary.png", setKindergartenSummary);
     fetchUrl("kindergartenBestPrs.pdf", setKindergartenBestPrs);
     fetchUrl("kindergartenCourseGraduate.png", setKindergartenCourseGraduate);
+    fetchUrl("kindergartenPrevCourses.png", setKindergartenPrevCourses);
+    fetchUrl(
+      "kindergartenCoursesDescription.pdf",
+      setKindergartenCoursesDescription
+    );
   }, []);
   return (
     <div className="w-screen  bg-WelcomeBackground bg-cover bg-center">
@@ -40,7 +48,7 @@ const Kindergarten = () => {
                 <File /> نبذة تعريفية عن التخصص{" "}
               </button>
             </Link>
-            <Link to={kindergartenSummary}>
+            <Link to={kindergartenCoursesDescription}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
@@ -50,12 +58,12 @@ const Kindergarten = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={kindergartenSummary}>
+            <Link to={kindergartenPrevCourses}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={kindergartenSummary}>
+            <Link to={kindergartenCourseGraduate}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>

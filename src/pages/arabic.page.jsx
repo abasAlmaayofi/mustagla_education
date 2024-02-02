@@ -8,8 +8,19 @@ import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
 const Arabic = () => {
-  const [link, setLink] = useState(null);
-  const fetchUrl = (path) => {
+  const [arabicSummary, setarabicSummary] = useState(null);
+  const [arabicPrevCourses, setarabicPrevCourses] = useState(null);
+  const [arabicCoursGraduate, setarabicCoursGraduate] = useState(null);
+  const [arabicBestPrs, setarabicBestPrs] = useState(null);
+  const [arabicCoursesDescription, setarabicCoursesDescription] =
+    useState(null);
+  const [arabic2BestPrs, setarabic2BestPrs] = useState(null);
+  const [arabic2PrevCourses, setarabic2PrevCourses] = useState(null);
+  const [arabic2CourseGraduate, setarabic2CourseGraduate] = useState(null);
+  const [arabic2CoursesDescription, setarabic2CoursesDescription] =
+    useState(null);
+
+  const fetchUrl = (path, setLink) => {
     getDownloadURL(ref(storage, path))
       .then((url) => {
         setLink(url);
@@ -17,7 +28,15 @@ const Arabic = () => {
       .catch((err) => console.log(err));
   };
   useEffect(() => {
-    fetchUrl("تصريح الزيارة الميدانية.pdf");
+    fetchUrl("arabicSummary.png", setarabicSummary);
+    fetchUrl("arabicPrevCourses.png", setarabicPrevCourses);
+    fetchUrl("arabicCoursGraduate.png", setarabicCoursGraduate);
+    fetchUrl("arabicBestPrs.pdf", setarabicBestPrs);
+    fetchUrl("arabicCoursesDescription.pdf", setarabicCoursesDescription);
+    fetchUrl("arabic2BestPrs.pdf", setarabic2BestPrs);
+    fetchUrl("arabic2PrevCourses.png", setarabic2PrevCourses);
+    fetchUrl("arabic2CourseGraduate.png", setarabic2CourseGraduate);
+    fetchUrl("arabic2CoursesDescription.png", setarabic2CoursesDescription);
   }, []);
   return (
     <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
@@ -30,27 +49,27 @@ const Arabic = () => {
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to={link}>
+            <Link to={arabicSummary}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن التخصص{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabicCoursesDescription}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabicBestPrs}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabicPrevCourses}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabicCoursGraduate}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
@@ -59,27 +78,27 @@ const Arabic = () => {
 
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to={link}>
+            <Link to={arabicSummary}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن التخصص{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabic2CoursesDescription}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabic2BestPrs}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabic2PrevCourses}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to={arabic2CourseGraduate}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>

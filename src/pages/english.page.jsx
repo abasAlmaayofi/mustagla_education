@@ -8,16 +8,16 @@ import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
 const English = () => {
-  const fetchUrl = (path) => {
-    getDownloadURL(ref(storage, path))
-      .then((url) => {
-        setLink(url);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    fetchUrl("تصريح الزيارة الميدانية.pdf");
-  }, []);
+  // const fetchUrl = (path) => {
+  //   getDownloadURL(ref(storage, path))
+  //     .then((url) => {
+  //       setLink(url);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   fetchUrl("تصريح الزيارة الميدانية.pdf");
+  // }, []);
   return (
     <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
       <Header />
@@ -28,22 +28,23 @@ const English = () => {
             تخصص اللغة الانجليزية
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
-          <Link to={arabicSummary}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> نبذة تعريفية عن التخصص{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> نبذة تعريفية عن المقررات{" "}
-            </button>
-          </Link>
-          <Link to={link}>
-            <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-              <File /> أفضل الدكاترة{" "}
-            </button>
-          </Link>
-          <Link to={link}>
+          <div className="flex flex-col flex-col-reverse gap-8">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishMajorSummaryE.pdf?t=2024-02-03T20%3A49%3A27.487Z">
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن التخصص{" "}
+              </button>
+            </Link>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishCoursesSummaryE.pdf?t=2024-02-03T20%3A49%3A52.808Z">
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن المقررات{" "}
+              </button>
+            </Link>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/eglishBestPrsE.pdf?t=2024-02-03T20%3A50%3A08.093Z">
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> أفضل الدكاترة{" "}
+              </button>
+            </Link>
+            {/* <Link to={link}>
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
               <File /> مسبقات المواد{" "}
             </button>
@@ -52,25 +53,26 @@ const English = () => {
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
               <File /> صحيفة التخرج{" "}
             </button>
-          </Link>
+          </Link> */}
+          </div>
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to={arabicSummary}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishMajorSummaryMH.pdf?t=2024-02-03T20%3A52%3A45.556Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن التخصص{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishCoursesSummaryMH.pdf?t=2024-02-03T20%3A52%3A32.859Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishBestPrsMH.pdf?t=2024-02-03T20%3A52%3A08.079Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={link}>
+            {/* <Link to={link}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
@@ -79,7 +81,7 @@ const English = () => {
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <Footer3 />

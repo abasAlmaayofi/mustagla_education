@@ -23,6 +23,8 @@ import Science from "./pages/science.page";
 import Kindergarten from "./pages/kindergarten.page";
 import Psychology from "./pages/psychology.page";
 import Math from "./pages/math.page";
+import Socialstudies from "./pages/socialstudies.page";
+import History from "./pages/history.page";
 
 function App() {
   return (
@@ -46,8 +48,9 @@ function App() {
             <Route path="/majors/math" element={<Math />} />
             <Route path="/majors/philosophy" element={<Philosophy />} />
             <Route path="/majors/science" element={<Science />} />
-            <Route path="/majors/kindergarten" element={<Kindergarten />} />
+            <Route path="/majors/kindergarden" element={<Kindergarten />} />
             <Route path="/majors/psychology" element={<Psychology />} />
+            <Route path="/majors/socialstudies" element={<Socialstudies />} />
             <Route path="/contact" element={<Contact />} />
             {/* <Route path="/contact" element={<Contact />} /> */}
           </Routes>

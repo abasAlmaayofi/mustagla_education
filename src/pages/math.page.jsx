@@ -8,17 +8,17 @@ import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
 const Math = () => {
-  const [link, setLink] = useState(null);
-  const fetchUrl = (path) => {
-    getDownloadURL(ref(storage, path))
-      .then((url) => {
-        setLink(url);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    fetchUrl("تصريح الزيارة الميدانية.pdf");
-  }, []);
+  // const [link, setLink] = useState(null);
+  // const fetchUrl = (path) => {
+  //   getDownloadURL(ref(storage, path))
+  //     .then((url) => {
+  //       setLink(url);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   fetchUrl("تصريح الزيارة الميدانية.pdf");
+  // }, []);
   return (
     <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
       <Header />
@@ -30,17 +30,17 @@ const Math = () => {
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/mathCoursesSummaryE.pdf?t=2024-02-03T22%3A52%3A48.361Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/mathBestPrsE.pdf?t=2024-02-03T22%3A52%3A29.082Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={link}>
+            {/* <Link to={link}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
@@ -49,21 +49,21 @@ const Math = () => {
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link>
+            </Link> */}
           </div>
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/mathCoursesSummaryMH.pdf?t=2024-02-03T22%3A53%3A02.388Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/mathBestPrsMH.pdf?t=2024-02-03T22%3A53%3A18.638Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={link}>
+            {/* <Link to={link}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
@@ -72,7 +72,7 @@ const Math = () => {
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link>
+            </Link> */}
           </div>
         </div>
         <Footer3 />

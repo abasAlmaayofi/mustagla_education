@@ -8,30 +8,30 @@ import storage from "../libs/firebase";
 import Footer3 from "../components/Footer3.component";
 
 const Kindergarten = () => {
-  const [kindergartenSummary, setKindergartenSummary] = useState(null);
-  const [kidnergartenBestPrs, setKindergartenBestPrs] = useState(null);
-  const [kindergartenCourseGraduate, setKindergartenCourseGraduate] =
-    useState(null);
-  const [kindergartenPrevCourses, setKindergartenPrevCourses] = useState(null);
-  const [kindergartenCoursesDescription, setKindergartenCoursesDescription] =
-    useState(null);
-  const fetchUrl = (path, setLink) => {
-    getDownloadURL(ref(storage, path))
-      .then((url) => {
-        setLink(url);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    fetchUrl("kindergartenSummary.png", setKindergartenSummary);
-    fetchUrl("kindergartenBestPrs.pdf", setKindergartenBestPrs);
-    fetchUrl("kindergartenCourseGraduate.png", setKindergartenCourseGraduate);
-    fetchUrl("kindergartenPrevCourses.png", setKindergartenPrevCourses);
-    fetchUrl(
-      "kindergartenCoursesDescription.pdf",
-      setKindergartenCoursesDescription
-    );
-  }, []);
+  // const [kindergartenSummary, setKindergartenSummary] = useState(null);
+  // const [kidnergartenBestPrs, setKindergartenBestPrs] = useState(null);
+  // const [kindergartenCourseGraduate, setKindergartenCourseGraduate] =
+  //   useState(null);
+  // const [kindergartenPrevCourses, setKindergartenPrevCourses] = useState(null);
+  // const [kindergartenCoursesDescription, setKindergartenCoursesDescription] =
+  //   useState(null);
+  // const fetchUrl = (path, setLink) => {
+  //   getDownloadURL(ref(storage, path))
+  //     .then((url) => {
+  //       setLink(url);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   fetchUrl("kindergartenSummary.png", setKindergartenSummary);
+  //   fetchUrl("kindergartenBestPrs.pdf", setKindergartenBestPrs);
+  //   fetchUrl("kindergartenCourseGraduate.png", setKindergartenCourseGraduate);
+  //   fetchUrl("kindergartenPrevCourses.png", setKindergartenPrevCourses);
+  //   fetchUrl(
+  //     "kindergartenCoursesDescription.pdf",
+  //     setKindergartenCoursesDescription
+  //   );
+  // }, []);
   return (
     <div className="w-screen  bg-WelcomeBackground bg-cover bg-center">
       <Header />
@@ -43,22 +43,22 @@ const Kindergarten = () => {
           </h1>
           {/* <h2 className="text-xl underline">برنامج الابتدائي </h2> */}
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to={kindergartenSummary}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/kindergardenMajorSummary.pdf?t=2024-02-03T20%3A36%3A15.817Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن التخصص{" "}
               </button>
             </Link>
-            <Link to={kindergartenCoursesDescription}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/kindergardenCoursesSummary.pdf?t=2024-02-03T20%3A36%3A28.894Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
             </Link>
-            <Link to={kidnergartenBestPrs}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/kindergardenBestPrs.pdf?t=2024-02-03T20%3A37%3A37.910Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to={kindergartenPrevCourses}>
+            {/* <Link to={kindergartenPrevCourses}>
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
@@ -67,7 +67,7 @@ const Kindergarten = () => {
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link>
+            </Link> */}
           </div>
           {/* <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <Link to={link}>

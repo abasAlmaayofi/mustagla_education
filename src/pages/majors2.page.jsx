@@ -24,6 +24,7 @@ import Major from "../components/major.component";
 import { getDownloadURL, ref } from "firebase/storage";
 import storage from "../libs/firebase";
 import { Link } from "react-router-dom";
+import ScreenLogo from "/ScreenLogo.jpg";
 
 const Majors2 = () => {
   // const [arabic, setArabic] = useState(false);
@@ -98,7 +99,12 @@ const Majors2 = () => {
         <Header />
         <div className="w-full md:h-[calc(60vh)] h-[calc(34vh)] bg-[#F5F5F5]/70 flex flex-col gap-8 justify-center items-center">
           <div className="relative flex flex-col justify-center items-center gap-2 mt-20">
-            <div className="bg-ScreenLogo bg-center bg-contain w-28 h-28 bg-no-repeat"></div>
+            {/* <div className="bg-ScreenLogo bg-center bg-contain w-28 h-28 bg-no-repeat"></div> */}
+            <img
+              src={ScreenLogo}
+              alt="mostaqilla-badge"
+              className="w-28 h-28 md:w-44 md:h-44"
+            />
             <h1 className="text-3xl text-[#125273] bg-white/80 shadow-md shadow-[#125273]/10 backdrop-blur-md p-2 rounded-lg relative -top-8 ">
               تخصصات كلية التربية
             </h1>

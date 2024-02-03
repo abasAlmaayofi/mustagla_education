@@ -9,6 +9,7 @@ import MajorsAndContact from "../components/majorsAndContact.component";
 import Footer3 from "../components/Footer3.component";
 import { getDownloadURL, ref } from "firebase/storage";
 import storage from "../libs/firebase";
+import kuwaitUniversityImg from "/kuwait-university-1.jpg";
 
 const Home2 = () => {
   const location = useLocation();
@@ -47,7 +48,12 @@ const Home2 = () => {
         >
           <div className="w-screen bg-WelcomeBackground bg-center bg-contain">
             <div className="w-full bg-[#F5F5F5]/70 flex flex-col gap-8 justify-center items-center">
-              <div className="w-full h-[calc(35vh)] bg-background-kuwait-university bg-cover bg-center">
+              <div className="w-full h-[calc(35vh)] relative md:bg-background-kuwait-university md:bg-cover md:bg-center">
+                <img
+                  src={kuwaitUniversityImg}
+                  alt="kuwait-university-collage-of-education-img"
+                  className="w-full h-full absolute z-0 opacity-70 md:hidden"
+                />
                 <Header />
                 <div className="w-full h-full bg-[#F5F5F5]/30 flex flex-col gap-8 justify-center items-center">
                   <div className="mt-12 py-2 rounded-md bg-white/50 backdrop-blur-lg mx-6">

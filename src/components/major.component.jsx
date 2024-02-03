@@ -16,6 +16,7 @@ const Major = ({ title, description, img, val, setVal, link }) => {
           width={400}
           height={150}
           className="rounded-xl shadow-md shadow-black/20"
+          loading="lazy"
         />
         <div className="absolute top-0 w-[400px] h-[200px] rounded-xl bg-[#125273]/30 mix-blend-color"></div>
         <div className="absolute top-0 w-[400px] h-[200px] rounded-xl bg-[#F5F5F5]/20 "></div>

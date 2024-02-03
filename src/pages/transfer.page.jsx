@@ -7,28 +7,28 @@ import storage from "../libs/firebase";
 import { Link } from "react-router-dom";
 
 const Transfer = () => {
-  const [internalTransfer, setInternalTransfer] = useState(null);
-  const [externalTransfer, setExternalTransfer] = useState(null);
-  const [facilitateInternalTransfer, setFacilitateInternalTransfer] =
-    useState(null);
-  const [facilitateExternalTransfer, setFacilitateExternalTransfer] =
-    useState(null);
-  const [transferMethod, setTransferMethod] = useState(null);
+  // const [internalTransfer, setInternalTransfer] = useState(null);
+  // const [externalTransfer, setExternalTransfer] = useState(null);
+  // const [facilitateInternalTransfer, setFacilitateInternalTransfer] =
+  //   useState(null);
+  // const [facilitateExternalTransfer, setFacilitateExternalTransfer] =
+  //   useState(null);
+  // const [transferMethod, setTransferMethod] = useState(null);
 
-  const fetchUrl = (path, setLink) => {
-    getDownloadURL(ref(storage, path))
-      .then((url) => {
-        setLink(url);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    fetchUrl("internalTransfer.jpeg", setInternalTransfer);
-    fetchUrl("externalTransfer.jpeg", setExternalTransfer);
-    fetchUrl("facilitateExternalTransfer.jpeg", setFacilitateExternalTransfer);
-    fetchUrl("facilitateInternalTransfer.jpeg", setFacilitateInternalTransfer);
-    fetchUrl("transferMethod.jpeg", setTransferMethod);
-  }, []);
+  // const fetchUrl = (path, setLink) => {
+  //   getDownloadURL(ref(storage, path))
+  //     .then((url) => {
+  //       setLink(url);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   fetchUrl("internalTransfer.jpeg", setInternalTransfer);
+  //   fetchUrl("externalTransfer.jpeg", setExternalTransfer);
+  //   fetchUrl("facilitateExternalTransfer.jpeg", setFacilitateExternalTransfer);
+  //   fetchUrl("facilitateInternalTransfer.jpeg", setFacilitateInternalTransfer);
+  //   fetchUrl("transferMethod.jpeg", setTransferMethod);
+  // }, []);
   return (
     <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
       <Header />
@@ -37,32 +37,35 @@ const Transfer = () => {
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
             شروط التحويل
           </h1>
-          <Link to={internalTransfer}>
+          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/internalTransfer.jpeg?t=2024-02-03T05%3A49%3A40.446Z">
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               داخلي - 2021 وما بعد
             </button>
           </Link>
 
-          <Link to={externalTransfer}>
+          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/externalTransfer.jpeg?t=2024-02-03T05%3A49%3A52.635Z">
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               خارجي - 2021 وما بعد
             </button>
           </Link>
 
-          <Link to={facilitateInternalTransfer}>
+          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/facilitateInternalTransfer.jpeg?t=2024-02-03T05%3A50%3A13.111Z">
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               مواد تسهل للتحويل الداخلي في كلية التربية{" "}
             </button>
           </Link>
 
-          <Link to={facilitateExternalTransfer}>
+          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/facilitateExternalTransfer.jpeg?t=2024-02-03T05%3A50%3A32.056Z">
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               مواد تسهل للتحويل خارجي إلى كلية التربية
             </button>
           </Link>
         </div>
         <div className="mt-8 flex flex-col gap-4 justify-center items-center">
-          <Link to={transferMethod} className="border-none">
+          <Link
+            to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/transferMethod.jpeg?t=2024-02-03T05%3A53%3A38.066Z"
+            className="border-none"
+          >
             <VideoBackground text="طريقة التحويل" />
           </Link>
           <div className="w-full flex justify-center flex-col items-center mt-6 gap-2">

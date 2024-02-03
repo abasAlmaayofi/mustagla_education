@@ -17,24 +17,24 @@ const Home2 = () => {
   const [courseSummary, setCourseSummary] = useState(null);
   const [registerationVideo, setRegisterationVideo] = useState(null);
   const [calendar, setCalendar] = useState(null);
-  const fetchUrl = (path, setLink) => {
-    getDownloadURL(ref(storage, path))
-      .then((url) => {
-        setLink(url);
-      })
-      .catch((err) => console.log(err));
-  };
-  useEffect(() => {
-    // fetchUrl("تصريح الزيارة الميدانية.pdf", setCollageInformation);
-    fetchUrl("معلومات جامعية 💛💙.pdf", setCollageInformation);
-    fetchUrl("WhatsApp Image 2024-02-02 at 6.20.28 PM.jpeg", setGradingSystem);
-    fetchUrl("نبذ عن المقررات العامة 💛💙.pdf", setCourseSummary);
-    fetchUrl(
-      "WhatsApp Video 2024-02-02 at 7.48.32 PM.mp4",
-      setRegisterationVideo
-    );
-    fetchUrl("calendar.pdf", setCalendar);
-  }, []);
+  // const fetchUrl = (path, setLink) => {
+  //   getDownloadURL(ref(storage, path))
+  //     .then((url) => {
+  //       setLink(url);
+  //     })
+  //     .catch((err) => console.log(err));
+  // };
+  // useEffect(() => {
+  //   // fetchUrl("تصريح الزيارة الميدانية.pdf", setCollageInformation);
+  //   fetchUrl("معلومات جامعية 💛💙.pdf", setCollageInformation);
+  //   fetchUrl("WhatsApp Image 2024-02-02 at 6.20.28 PM.jpeg", setGradingSystem);
+  //   fetchUrl("نبذ عن المقررات العامة 💛💙.pdf", setCourseSummary);
+  //   fetchUrl(
+  //     "WhatsApp Video 2024-02-02 at 7.48.32 PM.mp4",
+  //     setRegisterationVideo
+  //   );
+  //   fetchUrl("calendar.pdf", setCalendar);
+  // }, []);
   return (
     <AnimatePresence>
       {location.pathname == "/home" ? (
@@ -71,7 +71,7 @@ const Home2 = () => {
                   شروط التحويل الداخلي والخارجي{" "}
                 </button>
               </Link>
-              <Link to={courseSummary}>
+              <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/coursesSummary.pdf?t=2024-02-03T05%3A38%3A13.263Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
                   نبذة تعريفية عن المقررات العامة والإلزامية
                 </button>
@@ -91,7 +91,7 @@ const Home2 = () => {
                   PDF كتب{" "}
                 </button>
               </Link> */}
-              <Link to={collageInformation}>
+              <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/collageInformation.pdf?t=2024-02-03T05%3A36%3A48.961Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
                   معلومات جامعية{" "}
                 </button>
@@ -121,17 +121,17 @@ const Home2 = () => {
                   نموذج طبي - كلية التربية{" "}
                 </button>
               </Link> */}
-              <Link to={registerationVideo}>
+              <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/WhatsApp%20Video%202024-02-02%20at%207.48.32%20PM.mp4?t=2024-02-03T05%3A31%3A01.204Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
                   طريقة تسجيل المواد{" "}
                 </button>
               </Link>
-              <Link to={gradingSystem}>
+              <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/WhatsApp%20Image%202024-02-02%20at%206.20.28%20PM.jpeg?t=2024-02-03T05%3A32%3A27.938Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
                   سلم الدرجات{" "}
                 </button>
               </Link>
-              <Link to={calendar}>
+              <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/calendar%20(1).pdf?t=2024-02-03T05%3A35%3A04.713Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
                   التقويم الجامعي{" "}
                 </button>

@@ -14,6 +14,7 @@ import {
   TwitterOutlined,
 } from "@ant-design/icons";
 import ScreenLogo from "../assets/ScreenLogo.png";
+import WelcomeImg from "/Welcome.jpg";
 
 const WelcomePage = () => {
   const location = useLocation();
@@ -33,7 +34,13 @@ const WelcomePage = () => {
           transition={{ type: "string", stiffness: 40 }}
         >
           {/* <div className="w-screen md:h-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-background-welcome2 bg-center bg-cover"> */}
-          <div className="w-screen md:h-screen h-[calc(100vh_-_53px)] relative flex flex-col justify-center items-center bg-background-welcome bg-center bg-cover">
+
+          <div className="w-screen h-screen relative flex flex-col justify-center items-center md:bg-background-welcome md:bg-center md:bg-cover">
+            <img
+              src={WelcomeImg}
+              alt="mostaqilla-background-logo"
+              className="absolute z-0 h-screen w-screen md:hidden"
+            />
             <div
               className="fixed top-5 right-5 z-20 bg-gray-300/90 text-gray-400 rounded-full flex justify-center items-center gap-4 transition transform ease-in-out"
               onClick={() => setShowMedia((val) => !val)}
@@ -106,13 +113,13 @@ const WelcomePage = () => {
                 animate={{ y: 0 }}
                 transition={{ type: "spring", stiffness: 40 }}
                 onClick={OnClick}
-                className="rounded-lg text-3xl w-24 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[518px] text-white/80 flex justify-center items-center shadow-sm shadow-gray-500/90 "
+                className="rounded-lg text-3xl w-24 h-12 tracking-widest bg-[#1e89c1] hover:bg-gray-500/30  absolute z-10 md:top-[700px] top-[540px] text-white/80 flex justify-center items-center shadow-sm shadow-gray-500/90 "
               >
                 {/* <ChevronRight size={38} className="" /> */}
                 <h1 className="text-3xl tracking-wide">إضغط</h1>
               </motion.div>
             </div>
-            <div className="absolute bottom-0 mb-8 flex gap-4 right-4">
+            <div className="absolute bottom-5 flex gap-4 right-4">
               <Link to="https://www.tiktok.com/@mostaqillaedu">
                 <button className="border border-gray-500 backdrop-blur-md p-1 flex items-center text-gray-500 rounded-lg text-xs">
                   <FaTiktok />{" "}

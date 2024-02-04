@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Major = ({ title, description, img, val, setVal, link }) => {
   return (
-    <div>
+    <Link to={link}>
       {/* PHILOSOPHY */}
       <div className="w-[400px] h-[200px] rounded-xl flex justify-center relative">
         <h1 className="absolute text-xl text-white bg-[#125273] rounded-md px-6 tracking-wide mt-4">
@@ -45,7 +45,7 @@ const Major = ({ title, description, img, val, setVal, link }) => {
         </div>
       </div> */}
       {/* END */}
-    </div>
+    </Link>
   );
 };
 

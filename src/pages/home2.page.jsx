@@ -144,7 +144,7 @@ const Home2 = () => {
               </Link>
               <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/InternshipClearance.pdf?t=2024-02-04T19%3A58%3A08.613Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
-                  نموذج تصريح الزياره الميدانية
+                  نموذج تصريح الزيارة الميدانية
                 </button>
               </Link>
 

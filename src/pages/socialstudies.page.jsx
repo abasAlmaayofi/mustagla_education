@@ -49,11 +49,11 @@ const Socialstudies = () => {
           </h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            {/* <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicMajorsSummaryE.pdf?t=2024-02-03T20%3A41%3A09.852Z">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/socialstudiesMajorSummary.pdf?t=2024-02-04T17%3A58%3A30.890Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن التخصص{" "}
               </button>
-            </Link> */}
+            </Link>
             <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/socialstudiesCoursesSummary.pdf?t=2024-02-03T21%3A40%3A20.494Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
@@ -64,23 +64,23 @@ const Socialstudies = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            {/* <Link to={arabicPrevCourses}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/socialstudiesPrev.pdf?t=2024-02-04T17%3A44%3A39.649Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={arabicCoursGraduate}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/socialstudiesMajorSheet.pdf?t=2024-02-04T17%3A25%3A43.393Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link> */}
+            </Link>
           </div>
 
           {/* <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
             <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicMajorSummaryMH.pdf?t=2024-02-03T20%3A43%3A53.282Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
-                <File /> نبذة تعريفية عن التخصص{" "}
+                <File /> نبذة تعريفية عن التخصص{" "}~
               </button>
             </Link>
             <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicCoursesSummaryMH.pdf?t=2024-02-03T20%3A44%3A10.621Z">

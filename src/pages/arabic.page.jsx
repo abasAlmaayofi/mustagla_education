@@ -39,10 +39,10 @@ const Arabic = () => {
   //   fetchUrl("arabic2CoursesDescription.png", setarabic2CoursesDescription);
   // }, []);
   return (
-    <div className="w-screen bg-WelcomeBackground bg-cover bg-center">
+    <div className="w-screen min-h-screen bg-WelcomeBackground bg-cover bg-center">
       <Header />
 
-      <div className="w-full pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-center items-center">
+      <div className="w-full min-h-screen pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-evenly items-center">
         <div className="flex flex-col justify-center items-center gap-8">
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
             تخصص اللغة العربية
@@ -64,16 +64,16 @@ const Arabic = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            {/* <Link to={arabicPrevCourses}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicPrevE.pdf?t=2024-02-04T17%3A38%3A38.487Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={arabicCoursGraduate}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicMajorSheetE.pdf?t=2024-02-04T16%3A52%3A17.697Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link> */}
+            </Link>
           </div>
 
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
@@ -93,16 +93,16 @@ const Arabic = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            {/* <Link to={arabic2PrevCourses}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicPrevMH.pdf?t=2024-02-04T17%3A38%3A49.962Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={arabic2CourseGraduate}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/arabicMajorSheetMH.pdf?t=2024-02-04T16%3A52%3A49.951Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link> */}
+            </Link>
           </div>
         </div>
         <Footer3 />

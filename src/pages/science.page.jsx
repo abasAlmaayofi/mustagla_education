@@ -28,6 +28,11 @@ const Science = () => {
           <h1 className="text-3xl font-bold text-[#125273] mt-28">تخصص علوم</h1>
           <h2 className="text-xl underline">برنامج الابتدائي </h2>
           <div className="flex flex-col flex-col-reverse gap-8">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/scienceMajorSummary.pdf?t=2024-02-04T17%3A58%3A12.254Z">
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن التخصص{" "}
+              </button>
+            </Link>
             <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/scienceCoursesSummary.pdf?t=2024-02-03T22%3A24%3A42.786Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
@@ -38,16 +43,16 @@ const Science = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            {/* <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/sciencePrev.pdf?t=2024-02-04T17%3A44%3A20.807Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/scienceMajorSheet.pdf?t=2024-02-04T17%3A25%3A29.877Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link> */}
+            </Link>
           </div>
           {/* <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">

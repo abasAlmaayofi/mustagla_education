@@ -20,10 +20,10 @@ const Geology = () => {
   //   fetchUrl("تصريح الزيارة الميدانية.pdf");
   // }, []);
   return (
-    <div className="w-screen h-screen bg-WelcomeBackground bg-cover bg-center">
+    <div className="w-screen min-h-screen bg-WelcomeBackground bg-cover bg-center">
       <Header />
 
-      <div className="w-full h-screen pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-evenly items-center">
+      <div className="w-full min-h-screen pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-evenly items-center">
         <div className="flex flex-col justify-center items-center gap-8">
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
             تخصص جيولوجيا
@@ -51,7 +51,12 @@ const Geology = () => {
           </Link> */}
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
-            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/geographyCoursesSummary.pdf?t=2024-02-03T22%3A06%3A56.677Z">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/geologyMajorSummary.pdf?t=2024-02-04T17%3A54%3A51.344Z">
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن التخصص{" "}
+              </button>
+            </Link>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/geologyCoursesSummary.pdf?t=2024-02-04T17%3A55%3A19.812Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
               </button>
@@ -61,16 +66,16 @@ const Geology = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            {/* <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/geologyPrev.pdf">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/geologyMajorSheet.pdf?t=2024-02-04T17%3A18%3A57.689Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link> */}
+            </Link>
           </div>
         </div>
         <Footer3 />

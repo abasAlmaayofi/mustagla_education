@@ -51,6 +51,11 @@ const History = () => {
           </Link> */}
           <h2 className="text-xl underline">برنامج المتوسط والثانوي</h2>
           <div className="flex flex-col flex-col-reverse gap-8">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/historyMajorSummary.pdf?t=2024-02-04T17%3A55%3A47.153Z">
+              <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
+                <File /> نبذة تعريفية عن التخصص{" "}
+              </button>
+            </Link>
             <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/historyCoursesSummary.pdf?t=2024-02-03T21%3A49%3A38.991Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> نبذة تعريفية عن المقررات{" "}
@@ -61,16 +66,16 @@ const History = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            {/* <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/historyPrev.pdf?t=2024-02-04T17%3A40%3A54.371Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to={link}>
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/historyMajorSheet.pdf?t=2024-02-04T17%3A18%3A31.274Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>
-            </Link> */}
+            </Link>
           </div>
         </div>
         <Footer3 />

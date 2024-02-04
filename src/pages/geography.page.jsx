@@ -26,7 +26,7 @@ const Geography = () => {
       <div className="w-full min-h-screen pb-4 bg-[#F5F5F5]/70 flex flex-col gap-8 justify-evenly items-center">
         <div className="flex flex-col justify-center items-center gap-8">
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
-            تخصص جغرافية
+            تخصص جغرافيا
           </h1>
           {/* <h2 className="text-xl underline">برنامج الابتدائي </h2>
           <Link to={link}>

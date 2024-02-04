@@ -58,7 +58,7 @@ const Kindergarten = () => {
                 <File /> أفضل الدكاترة{" "}
               </button>
             </Link>
-            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/kindergardenPrev.pdf?t=2024-02-04T17%3A41%3A44.036Z">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/kindergardenPrev.pdf?t=2024-02-04T18%3A58%3A31.130Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> مسبقات المواد{" "}
               </button>

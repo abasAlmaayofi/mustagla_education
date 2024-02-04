@@ -77,7 +77,7 @@ const English = () => {
                 <File /> مسبقات المواد{" "}
               </button>
             </Link>
-            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishMajorSummaryMH.pdf?t=2024-02-04T16%3A53%3A55.301Z">
+            <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/englishMajorSheetMH.pdf?t=2024-02-04T20%3A01%3A15.393Z">
               <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] py-2 flex gap-2 items-center justify-center hover:bg-[#125273] hover:text-white">
                 <File /> صحيفة التخرج{" "}
               </button>

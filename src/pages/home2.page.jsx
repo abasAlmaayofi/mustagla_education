@@ -74,7 +74,7 @@ const Home2 = () => {
 
               <Link to="/transfer">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
-                  شروط التحويل الداخلي والخارجي{" "}
+                  كل ما يخص التحويل الداخلي والخارجي{" "}
                 </button>
               </Link>
               <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/coursesSummary.pdf?t=2024-02-03T05%3A38%3A13.263Z">

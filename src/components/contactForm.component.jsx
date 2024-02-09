@@ -89,11 +89,16 @@ const ContactForm = () => {
 
             <div className="w-full flex justify-end mb-8 gap-3 text-[#125273]">
               <div className="flex border-r-[1px] border-[#125273]/30 pr-2">
-                <h2 className="mr-1 text-[15px]">+965 94919900</h2>
+                <Link to="https://wa.me/96594919900">
+                  <h2 className="mr-1 text-[15px] underline">+965 94919900</h2>
+                </Link>
+
                 <h2>طالبات</h2>
               </div>
               <div className="flex">
-                <h2 className="mr-1 text-[15px]">+965 50803558</h2>
+                <Link to="https://wa.me/96598874245">
+                  <h2 className="mr-1 text-[15px] underline">+965 98874245</h2>
+                </Link>
                 <h2>طلبة</h2>
               </div>
               <Phone />

@@ -10,6 +10,7 @@ import Footer3 from "../components/Footer3.component";
 import { getDownloadURL, ref } from "firebase/storage";
 import storage from "../libs/firebase";
 import kuwaitUniversityImg from "/kuwait-university-1.jpg";
+import { useStore } from "../store/navbar";
 
 const Home2 = () => {
   const location = useLocation();
@@ -18,6 +19,9 @@ const Home2 = () => {
   const [courseSummary, setCourseSummary] = useState(null);
   const [registerationVideo, setRegisterationVideo] = useState(null);
   const [calendar, setCalendar] = useState(null);
+  const setActiveNavbarButton = useStore(
+    (state) => state.setActiveNavbarButton
+  );
   // const fetchUrl = (path, setLink) => {
   //   getDownloadURL(ref(storage, path))
   //     .then((url) => {
@@ -36,6 +40,9 @@ const Home2 = () => {
   //   );
   //   fetchUrl("calendar.pdf", setCalendar);
   // }, []);
+  useEffect(() => {
+    setActiveNavbarButton("main");
+  }, []);
   return (
     <AnimatePresence>
       {location.pathname == "/home" ? (

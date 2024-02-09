@@ -3,6 +3,7 @@ import { Button, Menu } from "antd";
 import { AlignLeft, AlignRight, Dot, Search, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
+import { useStore } from "../store/navbar";
 
 // bg-[#dce0e8]
 const Header = () => {
@@ -11,6 +12,10 @@ const Header = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [page, setPage] = useState("mainpage");
   const location = useLocation();
+  const [activeNavbarButton, setActiveNavbarButton] = useStore((state) => [
+    state.activeNavbarButton,
+    state.setActiveNavbarButton,
+  ]);
 
   function getItem(label, key, icon, children, type) {
     return {
@@ -64,12 +69,12 @@ const Header = () => {
               onClick={() => setShowSidebar(true)}
             /> */}
 
-            {/* <span className="md:text-2xl text-xl text-[#1b7bad] font-bold uppercase">
+            {/* <span className="md:text-2xl text-xl text-[#1b7bad] font-semibold uppercase">
               MostaqillaEDU
             </span> */}
           </div>
           {/* <div className="flex gap-2 items-center">
-            <h2 className="font-bold tracking-widest text-xl text-[#1e89c1] uppercase">
+            <h2 className="font-semibold tracking-widest text-xl text-[#1e89c1] uppercase">
               Mostaqilla
             </h2>
           </div> */}
@@ -85,40 +90,52 @@ const Header = () => {
           <div className="md:flex flex-row-reverse gap-6 relative hidden w-fit">
             <Link
               to="/home"
-              onClick={(e) => setPage(e.target.name)}
+              onClick={(e) => {
+                setPage(e.target.name);
+                setActiveNavbarButton("main");
+              }}
               className={`text-lg tracking-wide text-center  text-[#125273] ${
-                page == "mainpage" ? "" : "font-light"
-              } py-2   `}
+                activeNavbarButton == "main" ? "font-semibold" : ""
+              } ${page == "mainpage" ? "" : "font-light"} py-2   `}
               name="mainpage"
             >
               الصفحة الرئيسية
             </Link>
             <Link
               to="/"
-              onClick={(e) => setPage(e.target.name)}
+              onClick={(e) => {
+                setPage(e.target.name);
+                setActiveNavbarButton("welcome");
+              }}
               className={`text-lg tracking-wide text-center  text-[#125273] ${
-                page == "coverpage" ? "" : "font-light"
-              } py-2 `}
+                activeNavbarButton == "welcome" ? "font-semibold" : ""
+              }  ${page == "coverpage" ? "" : "font-light"} py-2 `}
               name="coverpage"
             >
               بوابة الدخول
             </Link>
             <Link
               to="/majors"
-              onClick={(e) => setPage(e.target.name)}
+              onClick={(e) => {
+                setPage(e.target.name);
+                setActiveNavbarButton("majors");
+              }}
               className={`text-lg tracking-wide text-center  text-[#125273] ${
-                page == "departmentspage" ? "" : "font-light"
-              } py-2 `}
+                activeNavbarButton == "majors" ? "font-semibold" : ""
+              }  ${page == "departmentspage" ? "" : "font-light"} py-2 `}
               name="departmentspage"
             >
               التخصصات
             </Link>
             <Link
               to="/contact"
-              onClick={(e) => setPage(e.target.name)}
+              onClick={(e) => {
+                setPage(e.target.name);
+                setActiveNavbarButton("contact");
+              }}
               className={`text-lg tracking-wide text-center text-[#125273] ${
-                page == "contactpage" ? "" : "font-light"
-              } py-2 `}
+                activeNavbarButton == "contact" ? "font-semibold" : ""
+              }  ${page == "contactpage" ? "" : "font-light"} py-2 `}
               name="contactpage"
             >
               تواصل
@@ -138,7 +155,7 @@ const Header = () => {
           >
             <div className=" flex justify-end">
               <Button
-                className="border-0 shadow-none text-[#125273] font-bold  m-2"
+                className="border-0 shadow-none text-[#125273] font-semibold  m-2"
                 icon={<X size={28} />}
                 onClick={() => setShowSidebar(false)}
               />
@@ -146,9 +163,12 @@ const Header = () => {
             <div className="mt-8  flex flex-col justify-center items-center gap-3 relative bg-[#F5F5F5]">
               <Link
                 to="/home"
-                onClick={(e) => setPage(e.target.name)}
+                onClick={(e) => {
+                  setPage(e.target.name);
+                  setActiveNavbarButton("main");
+                }}
                 // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
-                //   page == "contactpage" ? "font-bold " : ""
+                //   page == "contactpage" ? "font-semibold " : ""
                 // } py-2 `}
                 // name="contactpage"
               >
@@ -156,16 +176,22 @@ const Header = () => {
                   // level={2}
                   // style={{ color: "#125273", fontSize: "20px" }}
                   // type="link"
-                  className="text-right mr-2 text-4xl text-[#125273] mt-4"
+
+                  className={`text-right mr-2 text-4xl text-[#125273] mt-4 ${
+                    activeNavbarButton == "main" ? "font-semibold" : ""
+                  } `}
                 >
                   الصفحة الرئيسية
                 </h1>
               </Link>
               <Link
                 to="/"
-                onClick={(e) => setPage(e.target.name)}
+                onClick={(e) => {
+                  setPage(e.target.name);
+                  setActiveNavbarButton("welcome");
+                }}
                 // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
-                //   page == "contactpage" ? "font-bold " : ""
+                //   page == "contactpage" ? "font-semibold " : ""
                 // } py-2 `}
                 // name="contactpage"
               >
@@ -173,16 +199,21 @@ const Header = () => {
                   // level={2}
                   // style={{ color: "#125273", fontSize: "20px" }}
                   // type="link"
-                  className="text-right mr-2 text-4xl text-[#125273] mt-4"
+                  className={`text-right mr-2 text-4xl text-[#125273] mt-4 ${
+                    activeNavbarButton == "welcome" ? "font-semibold" : ""
+                  } `}
                 >
                   بوابة الدخول
                 </h1>
               </Link>
               <Link
                 to="/majors"
-                onClick={(e) => setPage(e.target.name)}
+                onClick={(e) => {
+                  setPage(e.target.name);
+                  setActiveNavbarButton("majors");
+                }}
                 // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
-                //   page == "contactpage" ? "font-bold " : ""
+                //   page == "contactpage" ? "font-semibold " : ""
                 // } py-2 `}
                 // name="contactpage"
               >
@@ -190,16 +221,21 @@ const Header = () => {
                   // level={2}
                   // style={{ color: "#125273", fontSize: "20px" }}
                   // type="link"
-                  className="text-right mr-2 text-4xl text-[#125273] mt-4"
+                  className={`text-right mr-2 text-4xl text-[#125273] mt-4 ${
+                    activeNavbarButton == "majors" ? "font-semibold" : ""
+                  } `}
                 >
                   التخصصات
                 </h1>
               </Link>
               <Link
                 to="/contact"
-                onClick={(e) => setPage(e.target.name)}
+                onClick={(e) => {
+                  setPage(e.target.name);
+                  setActiveNavbarButton("contact");
+                }}
                 // className={`text-2xl tracking-wide text-end pr-2 text-[#125273] ${
-                //   page == "contactpage" ? "font-bold " : ""
+                //   page == "contactpage" ? "font-semibold " : ""
                 // } py-2 `}
                 // name="contactpage"
               >
@@ -207,7 +243,9 @@ const Header = () => {
                   // level={3}
                   // style={{ color: "#125273", fontSize: "20px" }}
                   // type="link"
-                  className="text-right mr-2 text-4xl text-[#125273] mt-4"
+                  className={`text-right mr-2 text-4xl text-[#125273] mt-4 ${
+                    activeNavbarButton == "contact" ? "font-semibold" : ""
+                  } `}
                 >
                   تواصل{" "}
                 </h1>

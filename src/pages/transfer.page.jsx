@@ -37,13 +37,13 @@ const Transfer = () => {
           <h1 className="text-3xl font-bold text-[#125273] mt-28">
             شروط التحويل
           </h1>
-          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/internalTransfer.jpeg?t=2024-02-03T05%3A49%3A40.446Z">
+          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/innerTransfer.pdf?t=2024-02-27T06%3A52%3A41.112Z">
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               داخلي - 2021 وما بعد
             </button>
           </Link>
 
-          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/externalTransfer.jpeg?t=2024-02-03T05%3A49%3A52.635Z">
+          <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/outerTransfer.pdf?t=2024-02-27T06%3A54%3A25.903Z">
             <button className="rounded-none w-52 bg-[#F5F5F5] border-2 text-[#125273] font-semibold border-[#125273] hover:bg-[#125273] hover:text-white py-2 ">
               خارجي - 2021 وما بعد
             </button>

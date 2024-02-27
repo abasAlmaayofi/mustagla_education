@@ -154,11 +154,11 @@ const Home2 = () => {
                   نموذج تصريح الزيارة الميدانية
                 </button>
               </Link>
-              <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/graduationCeremony.pdf?t=2024-02-06T18%3A39%3A30.579Z">
+              {/* <Link to="https://sownkobchurdcuzqaoiu.supabase.co/storage/v1/object/public/main_mostaqillaedu/graduationCeremony.pdf?t=2024-02-06T18%3A39%3A30.579Z">
                 <button className="rounded-none w-52 bg-[#125273] text-white py-2 ">
                   حفل التخرج السنوي{" "}
                 </button>
-              </Link>
+              </Link> */}
 
               <Footer3 />
 
